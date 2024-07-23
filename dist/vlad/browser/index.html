@@ -1,0 +1,936 @@
+<!DOCTYPE html><html data-critters-container><head><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style ng-app-id="ng">[_nghost-ng-c2357947379] {
+    --bright-blue: oklch(51.01% 0.274 263.83);
+    --electric-violet: oklch(53.18% 0.28 296.97);
+    --french-violet: oklch(47.66% 0.246 305.88);
+    --vivid-pink: oklch(69.02% 0.277 332.77);
+    --hot-red: oklch(61.42% 0.238 15.34);
+    --orange-red: oklch(63.32% 0.24 31.68);
+
+    --gray-900: oklch(19.37% 0.006 300.98);
+    --gray-700: oklch(36.98% 0.014 302.71);
+    --gray-400: oklch(70.9% 0.015 304.04);
+
+    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+      180deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+      90deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --pill-accent: var(--bright-blue);
+
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1[_ngcontent-ng-c2357947379] {
+    font-size: 3.125rem;
+    color: var(--gray-900);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+
+  p[_ngcontent-ng-c2357947379] {
+    margin: 0;
+    color: var(--gray-700);
+  }
+
+  main[_ngcontent-ng-c2357947379] {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+  }
+
+  .angular-logo[_ngcontent-ng-c2357947379] {
+    max-width: 9.2rem;
+  }
+
+  .content[_ngcontent-ng-c2357947379] {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+
+  .content[_ngcontent-ng-c2357947379]   h1[_ngcontent-ng-c2357947379] {
+    margin-top: 1.75rem;
+  }
+
+  .content[_ngcontent-ng-c2357947379]   p[_ngcontent-ng-c2357947379] {
+    margin-top: 1.5rem;
+  }
+
+  .divider[_ngcontent-ng-c2357947379] {
+    width: 1px;
+    background: var(--red-to-pink-to-purple-vertical-gradient);
+    margin-inline: 0.5rem;
+  }
+
+  .pill-group[_ngcontent-ng-c2357947379] {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .pill[_ngcontent-ng-c2357947379] {
+    display: flex;
+    align-items: center;
+    --pill-accent: var(--bright-blue);
+    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
+    color: var(--pill-accent);
+    padding-inline: 0.75rem;
+    padding-block: 0.375rem;
+    border-radius: 2.75rem;
+    border: 0;
+    transition: background 0.3s ease;
+    font-family: var(--inter-font);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem;
+    letter-spacing: -0.00875rem;
+    text-decoration: none;
+  }
+
+  .pill[_ngcontent-ng-c2357947379]:hover {
+    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
+  }
+
+  .pill-group[_ngcontent-ng-c2357947379]   .pill[_ngcontent-ng-c2357947379]:nth-child(6n + 1) {
+    --pill-accent: var(--bright-blue);
+  }
+  .pill-group[_ngcontent-ng-c2357947379]   .pill[_ngcontent-ng-c2357947379]:nth-child(6n + 2) {
+    --pill-accent: var(--french-violet);
+  }
+  .pill-group[_ngcontent-ng-c2357947379]   .pill[_ngcontent-ng-c2357947379]:nth-child(6n + 3), .pill-group[_ngcontent-ng-c2357947379]   .pill[_ngcontent-ng-c2357947379]:nth-child(6n + 4), .pill-group[_ngcontent-ng-c2357947379]   .pill[_ngcontent-ng-c2357947379]:nth-child(6n + 5) {
+    --pill-accent: var(--hot-red);
+  }
+
+  .pill-group[_ngcontent-ng-c2357947379]   svg[_ngcontent-ng-c2357947379] {
+    margin-inline-start: 0.25rem;
+  }
+
+  .social-links[_ngcontent-ng-c2357947379] {
+    display: flex;
+    align-items: center;
+    gap: 0.73rem;
+    margin-top: 1.5rem;
+  }
+
+  .social-links[_ngcontent-ng-c2357947379]   path[_ngcontent-ng-c2357947379] {
+    transition: fill 0.3s ease;
+    fill: var(--gray-400);
+  }
+
+  .social-links[_ngcontent-ng-c2357947379]   a[_ngcontent-ng-c2357947379]:hover   svg[_ngcontent-ng-c2357947379]   path[_ngcontent-ng-c2357947379] {
+    fill: var(--gray-900);
+  }
+
+  @media screen and (max-width: 650px) {
+    .content[_ngcontent-ng-c2357947379] {
+      flex-direction: column;
+      width: max-content;
+    }
+
+    .divider[_ngcontent-ng-c2357947379] {
+      height: 1px;
+      width: 100%;
+      background: var(--red-to-pink-to-purple-horizontal-gradient);
+      margin-block: 1.5rem;
+    }
+  }</style></head><body><!--nghm--><vlad _nghost-ng-c2357947379 ng-version="17.3.12" ngh="0" ng-server-context="ssg"><main _ngcontent-ng-c2357947379 class="main"><div _ngcontent-ng-c2357947379 class="content"><div _ngcontent-ng-c2357947379 class="left-side"><svg _ngcontent-ng-c2357947379="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 982 239" fill="none" class="angular-logo"><g _ngcontent-ng-c2357947379="" clip-path="url(#a)"><path _ngcontent-ng-c2357947379="" fill="url(#b)" d="M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z"/><path _ngcontent-ng-c2357947379="" fill="url(#c)" d="M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z"/></g><defs _ngcontent-ng-c2357947379=""><radialGradient _ngcontent-ng-c2357947379="" id="c" cx="0" cy="0" r="1" gradientTransform="rotate(118.122 171.182 60.81) scale(205.794)" gradientUnits="userSpaceOnUse"><stop _ngcontent-ng-c2357947379="" stop-color="#FF41F8"/><stop _ngcontent-ng-c2357947379="" offset=".707" stop-color="#FF41F8" stop-opacity=".5"/><stop _ngcontent-ng-c2357947379="" offset="1" stop-color="#FF41F8" stop-opacity="0"/></radialGradient><linearGradient _ngcontent-ng-c2357947379="" id="b" x1="0" x2="982" y1="192" y2="192" gradientUnits="userSpaceOnUse"><stop _ngcontent-ng-c2357947379="" stop-color="#F0060B"/><stop _ngcontent-ng-c2357947379="" offset="0" stop-color="#F0070C"/><stop _ngcontent-ng-c2357947379="" offset=".526" stop-color="#CC26D5"/><stop _ngcontent-ng-c2357947379="" offset="1" stop-color="#7702FF"/></linearGradient><clipPath _ngcontent-ng-c2357947379="" id="a"><path _ngcontent-ng-c2357947379="" fill="#fff" d="M0 0h982v239H0z"/></clipPath></defs></svg><h1 _ngcontent-ng-c2357947379>Hello, vlad</h1><p _ngcontent-ng-c2357947379>Congratulations! Your app is running. 🎉</p></div><div _ngcontent-ng-c2357947379 role="separator" aria-label="Divider" class="divider"></div><div _ngcontent-ng-c2357947379 class="right-side"><div _ngcontent-ng-c2357947379 class="pill-group"><a _ngcontent-ng-c2357947379 target="_blank" rel="noopener" class="pill" href="https://angular.dev"><span _ngcontent-ng-c2357947379>Explore the Docs</span><svg _ngcontent-ng-c2357947379="" xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 -960 960 960" width="14" fill="currentColor"><path _ngcontent-ng-c2357947379="" d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></a><a _ngcontent-ng-c2357947379 target="_blank" rel="noopener" class="pill" href="https://angular.dev/tutorials"><span _ngcontent-ng-c2357947379>Learn with Tutorials</span><svg _ngcontent-ng-c2357947379="" xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 -960 960 960" width="14" fill="currentColor"><path _ngcontent-ng-c2357947379="" d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></a><a _ngcontent-ng-c2357947379 target="_blank" rel="noopener" class="pill" href="https://angular.dev/tools/cli"><span _ngcontent-ng-c2357947379>CLI Docs</span><svg _ngcontent-ng-c2357947379="" xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 -960 960 960" width="14" fill="currentColor"><path _ngcontent-ng-c2357947379="" d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></a><a _ngcontent-ng-c2357947379 target="_blank" rel="noopener" class="pill" href="https://angular.dev/tools/language-service"><span _ngcontent-ng-c2357947379>Angular Language Service</span><svg _ngcontent-ng-c2357947379="" xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 -960 960 960" width="14" fill="currentColor"><path _ngcontent-ng-c2357947379="" d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></a><a _ngcontent-ng-c2357947379 target="_blank" rel="noopener" class="pill" href="https://angular.dev/tools/devtools"><span _ngcontent-ng-c2357947379>Angular DevTools</span><svg _ngcontent-ng-c2357947379="" xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 -960 960 960" width="14" fill="currentColor"><path _ngcontent-ng-c2357947379="" d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></a><!----></div><div _ngcontent-ng-c2357947379 class="social-links"><a _ngcontent-ng-c2357947379 href="https://github.com/angular/angular" aria-label="Github" target="_blank" rel="noopener"><svg _ngcontent-ng-c2357947379="" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Github"><path _ngcontent-ng-c2357947379="" d="M12.3047 0C5.50634 0 0 5.50942 0 12.3047C0 17.7423 3.52529 22.3535 8.41332 23.9787C9.02856 24.0946 9.25414 23.7142 9.25414 23.3871C9.25414 23.0949 9.24389 22.3207 9.23876 21.2953C5.81601 22.0377 5.09414 19.6444 5.09414 19.6444C4.53427 18.2243 3.72524 17.8449 3.72524 17.8449C2.61064 17.082 3.81137 17.0973 3.81137 17.0973C5.04697 17.1835 5.69604 18.3647 5.69604 18.3647C6.79321 20.2463 8.57636 19.7029 9.27978 19.3881C9.39052 18.5924 9.70736 18.0499 10.0591 17.7423C7.32641 17.4347 4.45429 16.3765 4.45429 11.6618C4.45429 10.3185 4.9311 9.22133 5.72065 8.36C5.58222 8.04931 5.16694 6.79833 5.82831 5.10337C5.82831 5.10337 6.85883 4.77319 9.2121 6.36459C10.1965 6.09082 11.2424 5.95546 12.2883 5.94931C13.3342 5.95546 14.3801 6.09082 15.3644 6.36459C17.7023 4.77319 18.7328 5.10337 18.7328 5.10337C19.3942 6.79833 18.9789 8.04931 18.8559 8.36C19.6403 9.22133 20.1171 10.3185 20.1171 11.6618C20.1171 16.3888 17.2409 17.4296 14.5031 17.7321C14.9338 18.1012 15.3337 18.8559 15.3337 20.0084C15.3337 21.6552 15.3183 22.978 15.3183 23.3779C15.3183 23.7009 15.5336 24.0854 16.1642 23.9623C21.0871 22.3484 24.6094 17.7341 24.6094 12.3047C24.6094 5.50942 19.0999 0 12.3047 0Z"/></svg></a><a _ngcontent-ng-c2357947379 href="https://twitter.com/angular" aria-label="Twitter" target="_blank" rel="noopener"><svg _ngcontent-ng-c2357947379="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Twitter"><path _ngcontent-ng-c2357947379="" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a _ngcontent-ng-c2357947379 href="https://www.youtube.com/channel/UCbn1OgGei-DV7aSRo_HaAiw" aria-label="Youtube" target="_blank" rel="noopener"><svg _ngcontent-ng-c2357947379="" width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Youtube"><path _ngcontent-ng-c2357947379="" fill-rule="evenodd" clip-rule="evenodd" d="M27.4896 1.52422C27.9301 1.96749 28.2463 2.51866 28.4068 3.12258C29.0004 5.35161 29.0004 10 29.0004 10C29.0004 10 29.0004 14.6484 28.4068 16.8774C28.2463 17.4813 27.9301 18.0325 27.4896 18.4758C27.0492 18.9191 26.5 19.2389 25.8972 19.4032C23.6778 20 14.8068 20 14.8068 20C14.8068 20 5.93586 20 3.71651 19.4032C3.11363 19.2389 2.56449 18.9191 2.12405 18.4758C1.68361 18.0325 1.36732 17.4813 1.20683 16.8774C0.613281 14.6484 0.613281 10 0.613281 10C0.613281 10 0.613281 5.35161 1.20683 3.12258C1.36732 2.51866 1.68361 1.96749 2.12405 1.52422C2.56449 1.08095 3.11363 0.76113 3.71651 0.596774C5.93586 0 14.8068 0 14.8068 0C14.8068 0 23.6778 0 25.8972 0.596774C26.5 0.76113 27.0492 1.08095 27.4896 1.52422ZM19.3229 10L11.9036 5.77905V14.221L19.3229 10Z"/></svg></a></div></div></div></main><router-outlet _ngcontent-ng-c2357947379></router-outlet><!----></vlad>
+    <meta charset="UTF-16">
+		<title>Vlad</title>
+    <style>@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2) format('woff2');unicode-range:U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2) format('woff2');unicode-range:U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTVOmu1aB.woff2) format('woff2');unicode-range:U+0302-0303, U+0305, U+0307-0308, U+0330, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2034-2037, U+2057, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2102, U+210A-210E, U+2110-2112, U+2115, U+2119-211D, U+2124, U+2128, U+212C-212D, U+212F-2131, U+2133-2138, U+213C-2140, U+2145-2149, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B6, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTUGmu1aB.woff2) format('woff2');unicode-range:U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8B1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA88, U+1FA90-1FABD, U+1FABF-1FAC5, U+1FACE-1FADB, U+1FAE0-1FAE8, U+1FAF0-1FAF8, U+1FB00-1FBFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2) format('woff2');unicode-range:U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2) format('woff2');unicode-range:U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2) format('woff2');unicode-range:U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTVOmu1aB.woff2) format('woff2');unicode-range:U+0302-0303, U+0305, U+0307-0308, U+0330, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2034-2037, U+2057, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2102, U+210A-210E, U+2110-2112, U+2115, U+2119-211D, U+2124, U+2128, U+212C-212D, U+212F-2131, U+2133-2138, U+213C-2140, U+2145-2149, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B6, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTUGmu1aB.woff2) format('woff2');unicode-range:U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8B1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA88, U+1FA90-1FABD, U+1FABF-1FAC5, U+1FACE-1FADB, U+1FAE0-1FAE8, U+1FAF0-1FAF8, U+1FB00-1FBFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2) format('woff2');unicode-range:U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2) format('woff2');unicode-range:U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2) format('woff2');unicode-range:U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTVOmu1aB.woff2) format('woff2');unicode-range:U+0302-0303, U+0305, U+0307-0308, U+0330, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2034-2037, U+2057, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2102, U+210A-210E, U+2110-2112, U+2115, U+2119-211D, U+2124, U+2128, U+212C-212D, U+212F-2131, U+2133-2138, U+213C-2140, U+2145-2149, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B6, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTUGmu1aB.woff2) format('woff2');unicode-range:U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8B1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA88, U+1FA90-1FABD, U+1FABF-1FAC5, U+1FACE-1FADB, U+1FAE0-1FAE8, U+1FAF0-1FAF8, U+1FB00-1FBFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2) format('woff2');unicode-range:U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!--link rel="stylesheet" type="text/css" href="/css/common.css" /-->
+<meta name="format-detection" content="telephone=no">
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+
+
+	<style>p,h1,h2,h3,ul,li{margin:0;padding:0}html,body{width:100%;margin:0;padding:0;min-width:31px;font-family:Open Sans,sans-serif;background:#000;color:#fff;position:relative}#nav{position:fixed;z-index:500;top:0;left:0;min-height:52px;padding:0;background:#000;color:#b08c58;font-size:20px;text-transform:uppercase;font-weight:400}#nav ul{padding:0;text-align:center;margin:0 auto}#nav li{padding:14px;list-style-type:none;display:inline-block;cursor:pointer;white-space:nowrap;position:relative}#nav li .sub{display:none;position:absolute;background:#333;left:0;width:120%;padding:10px 0 20px;top:50px}#nav li .sub li{display:block;padding:5px 10px 5px 30px;text-transform:none;font-size:16px;text-align:left}#nav li:hover .sub{display:block}#nav li .sub li:hover{background:#222}#nav li .sub li:hover a,#nav li a{text-decoration:none}#nav li a:hover{text-decoration:underline}#nav li:hover{background:#333}#nav .callback{float:right;width:176px;padding-left:20px;height:40px;margin-top:5px;line-height:36px;color:#fff;background:url("./media/Phone-RNIT4KJQ.png") #a98755 15px 45% no-repeat;background-size:16px;text-transform:none;font-size:16px;text-align:center;border-radius:3px}#nav .callback:hover{cursor:pointer;background:url("./media/Phone-RNIT4KJQ.png")#997b4c 15px 45% no-repeat;background-size:16px}#nav_bottom{min-height:55px;max-width:950px;margin:0 auto;padding:10px 0 0;border-top:solid 1px #b08c58;background:#000;color:#fff;font-size:20px;text-transform:uppercase;font-weight:400}#nav_bottom ul{padding:0;text-align:center;margin:0 auto}#nav_bottom li{padding:12px 28px;list-style-type:none;display:inline-block;cursor:pointer;white-space:nowrap}h2{color:#fff;font-size:32px;font-weight:400;line-height:55px;text-transform:uppercase;text-align:center}h2.arrow{background:url("./media/arrow_1-JZPOD5EM.png") 50% 100% no-repeat;padding-bottom:50px;line-height:41px}h2.arrow1{background:url("./media/arrow_3-7WPPN4ZK.png")50% 100% no-repeat;padding-bottom:50px;line-height:41px}h2.type2{color:#a98755;font-size:52px;line-height:62px;font-weight:400;padding:50px 0 30px;letter-spacing:6px}p.text1{font-family:Georgia;color:#b08c58;font-size:30px;font-style:italic;margin:50px 0 60px}p.text2{color:#fff;font-size:24px;font-weight:400;text-transform:uppercase;margin:40px 0 10px;line-height:41px}p.text61{color:#fff;font-size:24px;font-weight:400;text-transform:uppercase;margin:40px 0 0;line-height:32px}p.text3{font-family:Georgia;color:#fff;font-size:28px;font-style:italic;padding-top:55px}p.text4{color:#b08c58;font-size:22px;font-weight:400;margin:50px 0 20px}p.text5{color:#b08c58;font-size:28px;font-weight:400;margin:10px 0 0}p.text7{color:#fff;font-size:22px;font-weight:400}p.text8{color:#fff;font-size:24px;font-weight:400;text-transform:uppercase;padding-top:60px}p.text9{color:#b08c58;font-size:22px;font-weight:400}p.text10{color:#b08c58;font-size:28px;font-weight:400}.decor{padding-bottom:60px;margin-bottom:0!important;background:url("./media/decor_2_bg-R2662BTE.png") 50% 100% no-repeat}.w3{max-width:600px;margin:0 auto}form.zayavka{width:1160px;height:305px}form.zayavka p{padding:45px 0 35px;font-family:Georgia;color:#b08c58;font-size:26px;font-style:italic}.zayavkaText{width:300px;padding:4px 8px;height:50px;line-height:50px;border-radius:6px;margin:0 10px;border:solid #1e2213 1px;text-align:left;font-weight:300;background:#1e2213;text-align:center;font-family:Georgia;color:#fff;font-size:26px;font-style:italic}textarea{width:300px;padding:4px 8px;height:120px;line-height:50px;border-radius:6px;margin:0 10px;border:solid #1e2213 1px;text-align:left;font-weight:300;background:#1e2213;text-align:center;font-family:Georgia;color:#fff;font-size:26px;font-style:italic}.zayavkaButton,.button{display:inline-block;width:318px;height:62px;background:url("./media/button1-GL3BAZFA.png") no-repeat;border:0;color:#fefefe;font-size:20px;font-weight:400;text-transform:uppercase;margin-top:30px;text-shadow:0 1px 1px rgba(47,45,6,.6)}.zayavkaButton:hover,.button:hover{background-position:0 -62px;text-shadow:0px -1px 1px rgba(47,45,6,.6)}.button{padding-top:15px;height:47px;cursor:pointer}form.zayavka.type2{margin-top:50px}.zayavkaText{background:#fff;border:solid #fff 1px;color:#1e2213}textarea{background:#fff;border:solid #fff 1px;color:#1e2213;line-height:20px;font-size:17px;text-align:left}form.zayavka.test{width:1160px;height:auto;background:none!important;margin-top:30px}form.zayavka.test h3{color:#fff;font-size:32px;font-weight:400;text-transform:uppercase;margin-bottom:40px;margin-top:40px}form.zayavka.test label{display:inline-block;color:#fff;font-size:28px;font-family:Georgia;font-style:italic;font-weight:300}form.zayavka.test .zayavkaText{margin-bottom:20px;font-size:22px;font-weight:300;margin-top:10px;width:240px}form.zayavka.test .zayavkaCheck{width:15px;height:15px}form.zayavka.test .price .caption{display:inline-block;color:#ae8f4f;font-size:22px;font-family:Georgia;font-style:italic;margin-top:30px}form.zayavka.test .price .num{display:block;color:#fff;font-size:28px;font-family:Georgia;font-style:italic;margin-top:5px;color:#ae8f4f}form.zayavka.test .price .order_price{font-size:42px}form.zayavka.test span{font-size:22px;color:#ae8f4f;font-family:Georgia;font-style:italic}form.zayavka.test span em{top:98px;width:260px!important}form.zayavka.test span.privacy em{width:auto!important}form.zayavka.test p{margin:0}#section2 .licence p{padding-top:0;padding-bottom:40px}form.zayavka input::-webkit-input-placeholder{color:#1c1e11}form.zayavka input::-moz-placeholder{color:#1c1e11}form.zayavka input:-moz-placeholder{color:#1c1e11}form.zayavka input:-ms-input-placeholder{color:#1c1e11}form.zayavka input:focus::-webkit-input-placeholder{color:transparent}form.zayavka input:focus::-moz-placeholder{color:transparent}form.zayavka input:focus:-moz-placeholder{color:transparent}form.zayavka input:focus:-ms-input-placeholder{color:transparent}form.zayavka textarea::-webkit-input-placeholder{color:#1c1e11}form.zayavka textarea::-moz-placeholder{color:#1c1e11}form.zayavka textarea:-moz-placeholder{color:#1c1e11}form.zayavka textarea:-ms-input-placeholder{color:#1c1e11}form.zayavka textarea:focus::-webkit-input-placeholder{color:transparent}form.zayavka textarea:focus::-moz-placeholder{color:transparent}form.zayavka textarea:focus:-moz-placeholder{color:transparent}form.zayavka textarea:focus:-ms-input-placeholder{color:transparent}form.zayavka.test span.privacy{font-size:14px}input[type=checkbox]{display:none}input[type=checkbox]+label:before{content:"";display:inline-block;height:15px;width:15px;margin:0 5px -2px 0;background-image:url("./media/radio_button-4HO6FKBS.png");background-repeat:no-repeat}input[type=checkbox]+label:before{background-position:0 0}input[type=checkbox]:checked+label:before{background-position:0 -15px}input[type=checkbox]:disabled+label:before{opacity:.3}form.zayavka.test .zayavkaCheck1{display:inline-block}.zayavka span.privacy em{display:block;position:static;width:auto;top:22px;left:11px;font-size:14px;line-height:14px;color:#fff;text-align:center}.formHide1{z-index:10000;color:#000!important;display:none;position:absolute;left:0;top:0;width:100%;height:100%;background-color:#51452dcc}.formHide1 .container{width:1160px;height:500px;margin:auto}.formHide1.type2 .container{width:1160px;height:450px}.formHide1.type2{text-align:center}.formHide1 .left_cont{display:inline-block;width:320px;vertical-align:top;text-align:center;margin-top:25px;margin-right:30px}.formHide1 .right_cont{display:inline-block;width:320px;vertical-align:top;text-align:center;margin-top:25px}.formHide1 .zayavkaText{margin-bottom:15px;width:308px!important;margin-top:0!important;border:solid 1px #5D5031;margin-left:0;margin-right:0}.formHide1 textarea{margin-bottom:20px;width:304px;height:128px;display:inline-block;margin-left:0;margin-right:0}.formHide1 h3{margin:0!important;padding:40px 0 25px!important;font-size:32px!important;color:#ae8f4f!important;text-transform:none!important;font-family:Georgia;font-style:italic}.formHide1 p{margin:0!important;padding:0 0 10px!important;line-height:22px!important;font-size:18px!important;color:#fff!important}.formHideClose1{position:absolute;right:0;top:0;margin:15px;cursor:pointer;padding:14px;border-radius:15px;border:solid 1px #B08C58}.formHide1 span em{top:62px!important;width:260px!important}.formHide1 .zayavkaButton{margin-top:0;margin-left:0;margin-right:0}.button:hover{background-position:0 -62px;text-shadow:0px -1px 1px rgba(47,45,6,.6)}.button:hover{background-position:0 -62px;text-shadow:0px -1px 1px rgba(47,45,6,.6)}#section1{background:url("./media/section_1_bg-JVJLLTAB.jpg") no-repeat;background-size:cover}#section1 .container{padding:70px 0 50px;text-align:center}h1{margin:40px auto 45px;color:#a98755;font-size:56px;font-weight:400;line-height:72px;text-transform:uppercase;letter-spacing:8px;max-width:1000px}#section1 p.caption{font-family:Georgia;color:#fff;font-size:28px;font-style:italic;padding-top:55px;background:url("./media/arrow_2-ZYRHD22H.png") 50% 0 no-repeat}.second_page_shema{padding:80px 0 100px;text-align:center;background-color:#605239;color:#fff;font-size:22px;font-weight:300;line-height:34px}.second_page_shema.type1{padding:50px 0 100px;text-align:center;background-color:#282722;color:#fff;font-size:22px;font-weight:300;line-height:34px}.second_page_shema .container{max-width:900px}.second_page_shema h2{color:#fff;font-size:32px;line-height:41px;background:url("./media/decor_3_bg-BBIWJLVW.png") 50% 55% no-repeat;padding-bottom:70px}#section2{background:url("./media/section_8_bg-IF6KZT4F.jpg") no-repeat;background-size:cover}#section2 .container{padding-top:70px;padding-bottom:150px;text-align:center}.days{font-family:Georgia;color:#b08c58;font-size:128px;font-style:italic;letter-spacing:6.4px;line-height:162px;padding-top:20px}.days1{font-family:Georgia;color:#b08c58;font-size:55px;font-weight:700;font-style:italic;line-height:62px}#section3{background:url("./media/section_3_bg-QN6U2CTF.png") #886c43 50% 20px no-repeat}#section3 .container{padding-top:70px;padding-bottom:90px;text-align:center}#section3 .list{margin:35px 0 85px;text-align:left}#section3 .list .block{display:inline-block;width:359px;height:359px;margin:18px;background-size:100%;vertical-align:top;text-align:center;line-height:0}#section3 .list .block.m1{background:url("./media/block_1_bg-PEOCX7QN.jpg") no-repeat;margin-left:0}#section3 .list .block.m2{background:url("./media/block_2_bg-C3DTY6PA.jpg") no-repeat}#section3 .list .block.m3{background:url("./media/block_3_bg-6PXON6LM.jpg") no-repeat;margin-right:0}#section3 .list .block.m4{background:url("./media/block_4_bg-MWZAAVQA.jpg") no-repeat;margin-left:0}#section3 .list .block.m5{background:url("./media/block_5_bg-OGO2XYTP.jpg") no-repeat}#section3 .list .block.m6{margin-right:0}#section3 .list .block h3{font-family:Georgia;color:#b08c58;font-size:34px;font-style:italic;line-height:34px;font-weight:400;padding:90px 0 30px;background:url("./media/decor_1_bg-67GZHBEN.png") 50% 100% no-repeat}#section3 .list .block p{font-family:Georgia;color:#fff;font-size:24px;line-height:24px;font-style:italic;padding:30px 0 0}#section3 .list .block.m4 h3{padding:130px 0 30px;background:none}#section4{background:#b08c58}#section4 .container{padding-top:70px;padding-bottom:90px;text-align:center;background:url("./media/animals-D74WWBT5.png") #b08c58 20% 120px no-repeat}#section4 .price{padding-top:170px;padding-bottom:20px}#section4 .price .block{display:inline-block;margin:40px 80px;width:400px;text-align:left;border-top:solid #fff 1px;padding-top:25px;padding-bottom:30px}#section4 .price .block a{color:#fff;font-size:20px;font-weight:400;line-height:22px}#section4 .price .block.m1{padding-bottom:130px}#section4 .price .block.m5{background:url("./media/ruzyo-7AEEHBGC.png") 0 40px no-repeat}#section4 .price .block h3,#section4 .price .block h3 a{font-family:Georgia;color:#fff;font-size:32px;font-style:italic;font-weight:400;padding-bottom:20px}#section4 .price .block table{color:#fff;font-size:20px;font-weight:400;line-height:22px}#section4 .price .block table td{white-space:nowrap;padding-left:30px;vertical-align:top}#section5{background:url("./media/section_5_bg_1-COW2OKAR.jpg") no-repeat;background-size:cover}#section5 .container{padding-top:40px;padding-bottom:90px;text-align:center}#section5 ul{padding:40px 0 0 150px;text-align:center}#section5 ul li{display:inline-block;vertical-align:top;width:380px;list-style-type:none;padding:30px 70px 50px 50px;font-family:Georgia;color:#fff;font-size:28px;font-style:italic;font-weight:400;text-align:left}#section6{background:url("./media/section_6_bg-5QFCRMC7.jpg") no-repeat;background-size:cover}#section6 .container{padding-top:70px;padding-bottom:90px;text-align:center}#section6 h2{padding-bottom:40px}#section6 #arrow_left{width:47px;height:47px;display:inline-block;vertical-align:top;background:url("./media/arrow_left-IEPX4DOL.png") no-repeat;margin:80px 40px 80px 0;cursor:pointer}#section6 #arrow_right{width:47px;height:47px;display:inline-block;vertical-align:top;background:url("./media/arrow_right-5RSB52JC.png") no-repeat;margin:80px 0 80px 40px;cursor:pointer}#section6 #comments{width:960px;height:210px;display:inline-block;vertical-align:top;border-radius:5px;font-family:Georgia;color:#493d27;font-size:22px;font-style:italic;text-align:left;margin-bottom:30px;overflow:hidden}#section6 #comments_container{position:relative}#section6 #comments .block{width:960px;height:210px;position:absolute;top:0;left:0;background:#fff;border-radius:5px}#section6 #comments .image{float:left;width:180px;height:210px;position:relative}#section6 #comments .image .fon{width:180px;height:210px;position:absolute;left:0;top:0;z-index:20;background:url("./media/triangle-BOYGZY4V.png") 100% 50% no-repeat}#section6 #comments .comm p{padding:40px 30px 0 230px}#section6 #comments .comm p.small{font-size:18px}#section6 #comments .comm p.caption{text-align:right;padding:10px 50px 0 230px;font-weight:700}.blockotziv{display:none;max-width:700px;padding:30px}.blockotziv .image{float:left;width:180px;height:210px;position:relative;padding:0 20px 20px 0}.blockotziv p{padding-bottom:10px}.blockotziv p.caption{text-align:right;font-size:22px;padding:10px 30px 0 0;font-weight:600}#section7{background-color:#886c43}#section7 .container{padding-top:70px;padding-bottom:90px;text-align:center}#section7 .list{padding:50px}#section7 .list .block{display:inline-block;width:350px;padding:10px 0 0}#section7 .list .block img{width:240px;border-radius:50%}#section7 .list .block h3{color:#fff;font-size:30px;font-weight:400;padding-top:10px}#section7 .list .block p{font-family:Georgia;color:#50432b;font-size:22px;font-style:italic;padding-top:15px}#section8{background:url("./media/section_2_bg-5S2POXRP.jpg") no-repeat;background-size:cover}#section8 .container{padding-top:70px;padding-bottom:90px;text-align:center}#section9{background-color:#50432b}#section9 .container{padding-top:70px;padding-bottom:0;text-align:center}#section9 ul{margin-top:70px;border-top:solid 1px #a98756;padding:70px 0 50px}#section9 li{list-style-type:none;width:28%;padding:80px 2% 50px 3%;display:inline-block;vertical-align:top;font-size:20px;font-weight:400}#section9 li.block1{background:url("./media/pict_1-Z3ILFEDC.png") 50% 0 no-repeat}#section9 li.block2{background:url("./media/pict_3-RJQBQAIG.png") 50% 0 no-repeat}#section9 li.block3{background:url("./media/pict_4-2MMBSTOC.png") 50% 0 no-repeat}#section9 li.block4{background:url("./media/pict_5-2TIJP2WL.png") 50% 0 no-repeat}#section9 li.block5{background:url("./media/pict_6-ATUS745I.png") 50% 0 no-repeat}#section9 li.block6{background:url("./media/pict_7-C4WVESWP.png") 50% 0 no-repeat}#section10 #gallary{width:100%;height:426px;position:relative;overflow:hidden}#section10 #gallary .cont{width:200%;height:426px;position:absolute;left:0;top:0;text-align:left}#section10 #gallary .cont img{height:426px;letter-spacing:0px;padding:0}#section10 #gallary .cont div{position:relative;float:left;height:426px;letter-spacing:0px;padding:0}#section10 #gallary .cont div div.bg{position:absolute;left:0;top:0;height:426px;width:100%;background:#00000080}#section10 #gallary .cont div div.bg:hover{background:#0000001a}#section10{background-color:#1e2213;z-index:10000}#section10 .container{padding-top:0;padding-bottom:90px;text-align:center}#section10 .text3{font-size:26px;line-height:36px;max-width:900px;margin:0 auto;padding-bottom:60px;background:url("./media/arrow_2-ZYRHD22H.png") 50% 100% no-repeat}#section10 .text4{font-size:22px;margin-top:40px}footer{text-align:center;padding:70px 0 100px}footer img{padding-bottom:40px}footer .contacts{color:#b08c58;font-size:16px;padding:60px 0 15px}footer .phone{color:#b08c58;font-size:20px}.zayavka span{display:inline-block;position:relative}.zayavka span em{display:block;position:absolute;width:300px;top:62px;left:11px;font-size:14px;line-height:14px;color:#fff;text-align:center}a{color:#b08c58}section,footer,nav{width:100%;display:block;clear:both}div.container{width:1170px;padding:0 50px;margin:0 auto}@media (max-width: 1280px){div.container{width:950px;padding:0 20px}form.zayavka{width:950px;height:305px;background-size:100%}.zayavkaText,.formHide1 .zayavkaText{width:260px!important;margin:0 5px;padding:4px 8px;height:40px;line-height:40px}.formHide1 textarea{width:260px;height:110px}.zayavkaButton,.button{display:inline-block;width:280px;height:52px;background-size:100%;margin-top:25px}.zayavkaButton:hover,.button:hover{background-position:0 -54px}.button{padding-top:11px;height:42px}form.zayavka p{padding:35px 0 25px}.zayavka span em{top:52px;width:260px;font-size:12px;line-height:12px}.formHide1 span em{top:55px!important}.formHide1 .left_cont{width:280px;margin-top:15px;margin-right:30px}.formHide1 .right_cont{width:280px;margin-top:15px}#section3{background:#886c43}#section3 .list{text-align:center}#section3 .list .block{width:290px;height:290px;margin:10px}#section3 .list .block h3{font-size:30px;line-height:30px;padding:70px 0 30px;max-width:280px}#section3 .list .block p{font-size:20px;line-height:20px;padding:30px 0 0}#section3 .list .block.m4 h3{padding:110px 0 30px}#section4 .price .block{display:inline-block;margin:40px;width:370px}#section5 ul{padding:70px 0 0 70px}#section5 ul li{display:inline-block;width:350px;padding:30px 30px 50px 50px;vertical-align:top}#section6 #comments{width:760px;height:210px;font-size:20px}#section6 #comments .block{width:760px;height:210px}#section6 #comments .comm p{padding:40px 30px 0 230px}#section7 .list .block{display:inline-block;width:280px;padding:30px 0 0}form.zayavka.test{width:950px}.formHide1 .container{width:950px;height:450px;background-size:950px}.formHide1 h3{padding:20px 0 15px!important}#nav.type1 li{padding:14px 10px;font-size:18px}#nav.type1 li .sub{min-width:200px}}@media (max-width: 1000px){div.container{width:780px;padding:0 10px}form.zayavka{width:780px;height:230px}.formHide1.type2 .container{width:780px;height:400px;background:#28220f}.formHide1 .zayavkaText{display:inline-block;width:190px;margin:0 3px 15px!important;padding:4px 8px;height:30px;line-height:30px;font-size:20px!important}.zayavkaText{width:190px;margin:0 3px 15px!important;padding:4px 8px;height:30px;line-height:30px;font-size:20px}.zayavkaButton{display:inline-block;width:210px;height:40px;background-size:100%;margin-top:20px;font-size:16px;line-height:18px;padding:0}.zayavkaButton:hover{background-position:0 -41px}.formHide1 textarea{width:260px;height:80px}form.zayavka.test{width:780px}.formHide1 .container{width:94%;height:auto;background:#231c06;border:solid 2px #AA8A56}.formHide1 .zayavkaButton{margin-bottom:40px!important;margin-top:0!important}.formHide1 span em{top:40px!important}.formHide1 h3{padding:35px 0 15px!important}form.zayavka p{padding:30px 0 20px;font-size:20px}.zayavka span em{top:42px;width:210px}#section3 .list .block{width:290px;height:290px;margin:10px!important}#section4 .container{background:none}#section4 .price{padding-top:50px;padding-bottom:20px}#section4 .price .block{display:inline-block;margin:20px 80px;width:400px;background-image:url("./media/animals-D74WWBT5.png");background-repeat:no-repeat}#section4 .price .block.m1{background-position:10px -70px;padding-bottom:40px}#section4 .price .block.m2{background-position:-350px 0px;padding-bottom:40px;background-size:160%}#section4 .price .block.m3{background-position:30px -300px;padding-bottom:40px;background-size:160%}#section4 .price .block.m4{background-position:-490px -400px;padding-bottom:40px;background-size:210%}#section4 .price .block.m6{padding-bottom:40px;background-image:none!important}#section6 #comments{width:600px;height:210px;font-size:16px}#section6 #comments .comm p.small{font-size:14px}#section6 #comments .block{width:600px;height:210px}#section6 #comments .comm p{padding:40px 30px 0 230px}#section6 #arrow_left{margin:80px 20px 80px 0}#section6 #arrow_right{margin:80px 0 80px 20px}#section9 li{list-style-type:none;width:38%;padding:80px 4% 50px 3%;display:inline-block;vertical-align:top;font-size:20px;font-weight:400}#nav.type1 .container{width:98%}#nav.type1 li{padding:12px 10px;font-size:15px;list-style-type:none;display:inline-block;cursor:pointer;white-space:nowrap}}@media (max-width: 800px){div.container{width:100%;min-width:320px;padding:0}form.zayavka.test{width:100%}.formHide1.type2 .container{width:100%;height:auto;background:#28220f}form.zayavka.test .button{margin-top:30px}h1{font-size:46px;line-height:62px;letter-spacing:6px}#section1 p.caption{font-size:24px}h2.type2{font-size:42px;line-height:52px;padding:50px 0 70px;letter-spacing:4px}form.zayavka{width:300px;margin:0 auto;height:auto;background:none!important}.zayavkaText{width:260px;margin:0 5px 20px;padding:4px 8px;height:40px;line-height:40px}.zayavkaButton,.button{display:inline-block;width:280px;height:52px;background-size:100%;margin-top:0}.zayavkaButton:hover,.button:hover{background-position:0 -54px}.button{height:43px}form.zayavka p{padding:15px 0 30px}.zayavka span em{top:52px;width:260px}#section6 #comments{width:96%;height:auto;font-size:14px}#section6 #comments .block{width:100%;position:static;margin:10px auto}#section6 #comments .comm p{padding:30px 30px 0 220px}#section6 #arrow_left,#section6 #arrow_right{display:none}#section10 #gallary{width:100%;height:auto}#section10 #gallary .cont{width:100%;height:auto;position:static;text-align:center}#section10 #gallary .cont img{float:none;display:inline;width:78%;height:auto;padding:5px 1%}#nav.type1 li{padding:15px 8px;font-size:13px}#nav.type1 li .sub{min-width:200px}}@media (max-width: 650px){#nav{font-size:16px;min-height:45px}#nav li{padding:10px 12px}#nav_bottom{font-size:16px}#nav_bottom li{padding:10px 12px}.logo{width:400px}h1{font-size:44px;line-height:52px;letter-spacing:4px}h2{font-size:28px;line-height:38px}.days{font-size:108px;letter-spacing:6.4px;line-height:142px;padding-top:20px}.days1{font-size:45px;line-height:52px}p.text1{font-size:24px;margin:30px 10px}p.text2{font-size:20px;margin:20px 10px;line-height:32px}p.text3{font-size:24px;padding-top:35px}p.text4{font-size:18px;margin:30px 10px 10px}#section4 .price .block{margin:20px;width:350px}#section4 .price .block table{font-size:16px;line-height:20px}#section4 .price .block table td{white-space:nowrap;padding-left:20px;vertical-align:top}#section4 .price .block.m1{background-position:10px -70px;padding-bottom:40px}#section4 .price .block.m2{background-position:-300px 20px;padding-bottom:40px;background-size:160%}#section4 .price .block.m3{background-position:30px -270px;padding-bottom:40px;background-size:160%}#section4 .price .block.m4{background-position:-430px -370px;padding-bottom:40px;background-size:210%}#section5 ul{padding:50px 0 0 40px}#section5 ul li{display:inline-block;width:350px;font-size:24px}#section6 #comments .image{display:none}#section6 #comments .block{height:auto}#section6 #comments .comm p{padding:30px 30px 5px}#section6 #comments .comm p.caption{padding:10px 30px 30px 0}#section9 li{list-style-type:none;width:58%;padding:80px 0 50px;display:inline-block;vertical-align:top;font-size:20px;font-weight:400}.formHide1 .left_cont{display:block;margin:15px auto 0;width:280px}#nav .callback{float:right;width:40px;padding-left:0;height:30px;margin-top:10px;line-height:36px;color:#fff;background:url("./media/Phone-RNIT4KJQ.png") #a98755 12px 45% no-repeat;background-size:16px;text-transform:none;font-size:0px;text-align:center;border-radius:3px}#nav .callback:hover{cursor:pointer;background:url("./media/Phone-RNIT4KJQ.png") #997b4c 12px 45% no-repeat;background-size:16px}}@media (max-width: 470px){#nav{font-size:14px;min-height:42px}#nav li{padding:10px 8px}#nav.type1 ul{padding:10px 0}#nav.type1 li{padding:2px 8px;font-size:13px;min-height:16px}#nav .callback{margin-top:7px;line-height:30px}#nav.type1 li .sub{min-width:200px;top:25px;z-index:100}#nav_bottom{font-size:14px}#nav_bottom li{padding:10px 8px}.logo{width:300px}h1{font-size:30px;line-height:40px;letter-spacing:2px}h2.type2{font-size:30px;line-height:40px;padding:50px 0 70px;letter-spacing:2px}.days{font-size:88px;letter-spacing:4.4px;line-height:122px;padding-top:20px}.days1{font-size:35px;line-height:42px}#section4 .price .block{margin:20px 10px;width:300px}#section4 .price .block table{font-size:14px;line-height:18px}#section4 .price .block table td{white-space:nowrap;padding-left:10px;vertical-align:top}#section4 .price .block.m1{background-position:30px -10px;padding-bottom:40px;background-size:210%}#section4 .price .block.m2{background-position:-250px 20px;padding-bottom:40px;background-size:160%}#section4 .price .block.m3{background-position:30px -250px;padding-bottom:40px;background-size:190%}#section4 .price .block.m4{background-position:-430px -350px;padding-bottom:40px;background-size:250%}#section7 .list{padding:50px 10px}#section7 .list .block{display:inline-block;width:300px;padding:30px 0 40px}#section7 .list .block p{padding-top:5px}#section5 ul{padding:30px 0 0 10px;text-align:center}#section5 ul li{display:inline-block;width:200px;font-size:20px;padding:20px 0 30px 30px;background-size:14%}#section9 li{list-style-type:none;width:78%!important;padding:80px 0 50px;display:inline-block;vertical-align:top;font-size:20px;font-weight:400}#section10 #gallary .cont img{float:none;display:inline;width:98%;height:auto;padding:5px 1%}}@media (max-width: 390px){#nav{font-size:12px;min-height:40px}#nav li{padding:10px 5px}#nav_bottom{font-size:12px}#nav_bottom li{padding:10px 5px}h2{font-size:24px;line-height:38px}#section9 ul{margin-top:50px;border-top:solid 0px #a98756;padding:0 0 50px}#section10 .text3{font-size:20px;line-height:30px;max-width:900px;margin:0 auto;padding-bottom:40px;background:url("./media/arrow_2-ZYRHD22H.png") 50% 100% no-repeat}#section10 .text4{font-size:20px;margin-top:30px}}
+</style><link rel="stylesheet" href="styles-MJWKRGQM.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-MJWKRGQM.css"></noscript>
+
+	
+	 <div id="container">
+		<nav id="nav" class="type1"><div class="container">
+		<div class="callback">Обратный звонок</div>
+			<ul>
+				<li>Вид охоты
+					<ul class="sub">
+						<!--li><a href="/ohota-na-kabana/">Охота на кабана</a></li-->
+						<li><a href="/ohota-na-losya/">Охота на лося</a></li>
+						<li><a href="/ohota-na-gusya/">Охота на гуся</a></li>
+						<li><a href="/ohota-na-utku/">Охота на утку</a></li>
+						<li><a href="/ohota-na-gluharya/">Охота на глухаря</a></li>
+						<li><a href="/ohota-na-tetereva/">Охота на тетерева</a></li>
+						<li><a href="/rybalka/">Рыбалка</a></li>
+						<li><a href="/certificate/">Сертификаты</a></li>
+					</ul>
+				</li>
+				<li class="scroll-price">Цены</li>
+				<!--li class="scroll-promo">Спецпредложения</li-->
+				<li class="scroll-comment">Отзывы</li>
+				<!--li class="scroll-eger">Егеря</li-->
+				<li class="scroll-map">Схема проезда</li>
+				<li><a href="http://ferma.davydovskoe.com/prozhivanie/" target="_blank">Проживание</a></li>
+			</ul></div>
+		</nav>
+
+		<div class="formHide1 type2" id="callbackForm"><div class="container">
+	<div class="formHideClose1" id="formHideClose2"></div>
+	<h3>Обратный звонок</h3>
+
+
+</div></div>
+		<section id="section1"><div class="container">
+			<img class="logo" src="assets/logo1.png">
+			<h1>Охота и отдых для&nbsp;настоящих мужчин</h1>
+			<p class="caption">Охота в Ярославле, Борисоглебский район</p>
+			<p class="text5">+7 (962) 209-24-64<br>+7 (905) 632-06-12</p>
+		</div></section>
+
+		<section id="section9"><div class="container">
+			<h2>О нас</h2>
+		<ul>
+			<li class="block1">
+			Мы находимся
+			в Ярославской области,
+			Борисоглебский район —
+			расстояние до Москвы 230&nbsp;км
+			или 4,5&nbsp;часа езды.
+			</li>
+			<li class="block2">
+			Площадь охотничьих угодий
+			составляет 17,2&nbsp;тыс.&nbsp;га —
+			настоящее раздолье
+			для охотников и рыболовов
+			</li>
+			<li class="block3">
+			Разнообразный ландшафт:
+			от глухих лесов и болот
+			до обработанных полей,
+			в сосновых борах
+			много ягод и грибов
+			</li>
+			<li class="block4">
+			Всевозможные виды
+			промысловых зверей и птиц:
+			лось, кабан, медведь, рысь,
+			волк, лиса, заяц, гусь, глухарь,
+			тетерев, рябчик
+			</li>
+			<li class="block5">
+			В чистейшей реке и прудах
+			водится рыба: карп, карась, щука,
+			лещ, плотва, голавль,
+			хариус, раки
+			</li>
+			<li class="block6">
+			Рядом туристические
+			достопримечательности:
+			Борисоглебский Кремль,
+			святые источники, усадьба
+			графа Шереметьева
+			</li>
+		</ul>
+
+</div></section>
+
+<a name="scroll-promo"></a>
+		<span class="scrollto scroll-promo"></span>
+		<section id="section5" name="scroll-promo"><div class="container">
+			<p class="text3">Специальное предложение!</p>
+			<h2 class="type2">Охота на&nbsp;Кабана</h2>
+
+
+			<p class="text8">ВЫ ПОЛУЧАЕТЕ:</p>
+			<ul>
+				<li>Необычное захватывающее<br>
+				приключение</li>
+
+				<li>Отличный трофей<br>
+				по окончании охоты</li>
+
+				<li>Потрясающие эмоции<br>
+				и адреналин</li>
+
+				<li>Мясо обладающее исключительными вкусовыми качествами</li>
+			</ul>
+
+			<!--p class="text4" style="font-weight:600; margin:20px 0 0px 0;">Обслуживание — 3 000 руб. за ночь.<br>
+			Трофей — от 10 000 до 35 000 руб.</p-->
+
+			<!--p class="text4" style="color:red; font-weight:600; margin:20px 0 0px 0;">Охота закрыта</p-->
+
+			<p class="text8">От нас:</p>
+
+			<p class="text7" style="margin:30px 0 0 0;">Опытный егерь
+			<br>и богатые зверем частные угодья!</p>
+
+<p class="text9" style="margin:50px 0 0 0;">Подробности по почте fadeichev@yandex.ru</p>
+<p class="text10">+7 (962) 209-24-64<br>+7 (905) 632-06-12</p>
+			<br><br>
+			<!--div class="button scroll-order">Забронировать</div-->
+
+
+		</div></section>
+
+
+
+
+
+		<section id="section3"><div class="container">
+			<h2 class="arrow">Почему нас выбирают</h2>
+
+			<div class="list">
+				<div class="block m1">
+					<h3>Угодья, богатые зверем</h3>
+					<p>никто не уйдёт<br> без добычи</p>
+				</div>
+				<div class="block m2">
+					<h3>Возможность отдохнуть</h3>
+					<p>от семейных забот<br> и домашнего<br> быта</p>
+				</div>
+				<div class="block m3">
+					<h3>Недорогие лицензии на охоту</h3>
+					<p>минимальная<br> цена на дичь</p>
+				</div>
+				<div class="block m4">
+					<h3>Природа, не тронутая цивилизацией</h3>
+				</div>
+				<div class="block m5">
+					<h3>Настоящие охотничьи домики</h3>
+					<p>чтобы как следует<br> отпраздновать<br> удачную охоту</p>
+				</div>
+				<div class="block m6">
+					<h3>Возможность порыбачить на речке</h3>
+					<p>со своими<br> снастями</p>
+				</div>
+			</div>
+
+			<p class="text2">Забронируйте лучший отдых</p>
+			<div class="button scroll-order">Забронировать</div>
+		</div></section>
+
+		<a name="scroll-price"></a>
+		<span class="scrollto scroll-price"></span>
+		<section id="section4" name="scroll-price"><div class="container">
+			<h2 class="arrow1">Цены на услуги</h2>
+
+			<div class="price">
+				<div class="block m1">
+					<h3><a href="/ohota-na-kabana/">Охота на кабана</a></h3>
+					<!--p>Охота закрыта</p-->
+					<table>
+						<tbody><tr><td>до 20 кг </td> <td>10 000 руб.</td></tr>
+						<tr><td>до 40 кг </td> <td>15 000 руб.</td></tr>
+						<tr><td>до 60 кг </td> <td>20 000 руб.</td></tr>
+						<tr><td>до 80 кг </td> <td>25 000 руб.</td></tr>
+						<tr><td>до 100 кг </td> <td>30 000 руб.</td></tr>
+						<tr><td>Секач от 100 до 120 кг</td> <td>35 000 руб.</td></tr>
+						<tr><td>Секач от 120 до 140 кг</td> <td>40 000 руб.</td></tr>
+						<tr><td>Секач от 140 до 160 кг</td> <td>45 000 руб.</td></tr>
+						<tr><td colspan="2">Доплата за трофей + 1000 руб. <br>за каждый видимый см. клыка</td></tr>
+						<tr><td><br>Отстрел половозрелой свиньи<br> весом от 80 кг. Мясо отпускается<br>за дополнительную плату по весу</td> <td><br>50 000 руб.</td></tr>
+					</tbody></table>
+				</div>
+				<div class="block m2">
+					<h3><a href="/ohota-na-losya/">Охота на лося</a></h3>
+					<table>
+						<tbody><tr><td>На реву</td> <td></td></tr>
+						<tr><td>взрослый до 5 отростков</td> <td>80 000 руб.</td></tr>
+						<tr><td>от 5 до 8 отростков</td> <td>90 000 руб.</td></tr>
+						<tr><td>от 8 до 10 отростков</td> <td>100 000 руб. </td></tr>
+						<tr><td>более 10 отростков</td> <td>120 000 руб.</td></tr>
+						<tr><td>&nbsp;</td> <td></td></tr>
+						<tr><td>Загоном</td> <td></td></tr>
+						<tr><td>сеголеток (до года) </td> <td>45 000 руб.</td></tr>
+						<tr><td>взрослый (до двух лет) </td> <td>75 000 руб.</td></tr>
+						<tr><td>взрослый<br>(более двух лет) </td> <td>80 000 руб.</td></tr>
+						<tr><td>самка лося (корова) </td> <td>150 000 руб.</td></tr>
+
+						<!--tr><td>лось</td> <td>50 000 руб.</td></tr>
+						<tr><td>трофейный лось<br>(от 5 отростков)</td> <td>60 000 руб.</td></tr>
+						<tr><td>до года</td> <td>25 000 руб.</td></tr>
+						<tr><td>самка лося</td> <td>70 000 руб.</td></tr-->
+					</tbody></table>
+				</div>
+				<div class="block m3">
+					<h3>Охота на пушнину</h3>
+					<table>
+						<tbody><tr><td>волк</td> <td>15000 руб., </td></tr>
+						<tr><td>заяц</td> <td>1000 руб., </td></tr>
+						<tr><td>куница</td> <td>2000 руб., </td></tr>
+						<tr><td>лиса</td> <td>1000 руб.,</td></tr>
+						<tr><td>бобер</td> <td>5000 руб.</td></tr>
+					</tbody></table>
+				</div>
+				<div class="block m4">
+					<h3>Охота на птицу</h3>
+					<table>
+						<tbody><tr><td><a href="/ohota-na-gusya/">гусь</a></td> <td>1000 руб. сутки; 5000 руб. сезон</td></tr>
+						<!--tr><td><a href="/ohota-na-utku/">утка</a></td> <td>1000 руб.<br></td></tr-->
+						<tr><td><a href="/ohota-na-utku/">утка</a></td> <td>1000 руб. сутки; 5000 руб. сезон</td></tr>
+						<tr><td>вальдшнеп</td> <td>500 руб. сутки; 3000 руб. сезон</td></tr>
+						<tr><td><a href="/ohota-na-gluharya/">глухарь</a></td> <td>10 000 руб.</td></tr>
+						<tr><td><a href="/ohota-na-tetereva/">тетерев</a></td> <td>5000 руб.</td></tr>
+					</tbody></table>
+
+				</div>
+
+				<!--div class="block m41">
+					<h3>Охота на пятнистого оленя</h3>
+					<table>
+						<tr><td>Сеголеток</td> <td>28 000 руб.,</td></tr>
+						<tr><td>Шильник</td> <td>38 000 руб.,</td></tr>
+						<tr><td>Самец от 3-х лет, до 3-х отростков</td> <td>50 000 руб.,</td></td></tr>
+						<tr><td>Трофейный 4 отростка</td> <td>80 000 руб.,</td></tr>
+						<tr><td>Самка старше года</td> <td>80 000 руб.</td></tr>
+					</table>
+
+				</div-->
+
+				<div class="block m5">
+					<h3>Организация охоты</h3>
+					<table>
+						<tbody><tr><td>Коллективное обслуживание<br>(от 2 человек) </td> <td>4500 руб.<br>чел./день</td></tr>
+
+						<tr><td><br>Индивидуальное обслуживание<br>(транспорт, сопровождение егерем)</td> <td><br>5000 руб.<br>чел./день</td></tr>
+
+						<tr><td><br>Аренда снегохода</td> <td><br>5000 руб./день</td></tr>
+
+						<tr><td><br>Обслуживание охоты на утку, гуся<br>(транспорт, шалаш). Выходные (сб-вс)</td> <td><br>10 000 руб.<br>чел./день;</td></tr>
+
+						<tr><td><br>Будние дни (пн-пт)</td> <td><br>5000 руб.<br>чел./день;</td></tr>
+						<tr><td><br>Проживание</td> <td><br>1000 руб.</td></tr>
+						<tr><td><br>Разделка мяса</td> <td><br>5000 руб.</td></tr>
+
+					</tbody></table>
+				</div>
+				<div class="block m6">
+					<h3>Штрафы</h3>
+					<table>
+						<!--tr><td>Отказ от выстрела или промах<br>
+						оплачивается как 25% от стоимости<br>
+						лицензии.</td></tr-->
+
+						<tbody><tr><td>Промах — 25% от стоимости<br>
+						лицензии.</td></tr>
+
+						<tr><td><br>Подранок — 100% лицензии, возможен<br>
+						добор на следующий день.</td></tr>
+
+						<tr><td><br>Нарушение <a href="/rules/">техники безопасности</a> - 7000 руб.</td></tr>
+
+					</tbody></table>
+				</div>
+
+			</div>
+
+			<p class="text2">Успейте забронировать по самым низким ценам</p>
+			<div class="button scroll-order">Забронировать</div>
+		</div></section>
+
+
+		<section id="section2"><div class="container">
+	<a name="scroll-order"></a>
+	<span class="scrollto scroll-order"></span>
+	<p class="text61">Успейте забронировать охоту<br> до конца сезона!</p>
+	<form class="zayavka m4 type2 test" action method="POST" enctype="multipart/form-data">
+
+	<div class="licence"><p>Забронировано 233 лицензий</p></div>
+		<span>Вид охоты (зверь):<br><input class="zayavkaText" type="text" name="zayavkaAnimal" placeholder="Охота на кабана" value><em></em></span>
+		<span>Дата охоты:<br><input class="zayavkaText" type="text" name="data" placeholder="Дата охоты" value="23.07.2024" id="datepicker"><em></em></span><br>
+		<span>Количество человек:<br><input class="zayavkaText mask_number" type="text" name="person" placeholder="Количество человек" value="1"><em></em></span>
+		<span>Количество дней:<br><input class="zayavkaText mask_number" type="text" name="days" placeholder="Количество дней" value="1"><em></em></span><br>
+
+		<input type="hidden" name="uid" value="1262924058669e9630599f9">
+		<input type="hidden" name="order_price" value="5000">
+		<input class="zayavkaCheck" type="checkbox" name="hotel" value="on" id="hotel_check"><label for="hotel_check"> С проживанием</label>
+		<div class="price"><span class="caption">Стоимость бронирования:</span> <span class="num"><span class="order_price">5 000</span> руб.</span></div>
+		<!--div class="price"><span class="caption">Общая стоимость обслуживания и проживания составит:</span> <span class="order_price_total">3 000</span> <span>руб.</span></div-->
+
+
+		<div class="button formOpen">Оформить заявку</div>
+
+		<div class="formHide1" id="calcForm"><div class="container">
+			<div class="formHideClose1" id="formHideClose1"></div>
+			<h3>Забронировать охоту</h3>
+			<!--p>Заезд <i class="idate_in">07.07.2016</i>; для <i class="ipersons">4 человек</i> на <i class="idays">4 дня</i>;</p>
+			<p>Стоимость бронирования: <i class="num"><i class="order_price">4 000</i> руб.</i></p-->
+
+			<p>дата охоты <i class="idate_in">07.07.2016</i> | <i class="ipersons">4 человека</i> | <i class="idays">4 дня</i> | предоплата <i class="order_price">4 000</i> руб.</p>
+
+			<div class="left_cont">
+				<span><input class="zayavkaText" type="text" name="zayavkaName" placeholder="Имя"><em></em></span>
+				<span><input class="zayavkaText" type="text" name="zayavkaPhone" placeholder="Телефон" id="mask_phone1"><em></em></span>
+				<span><input class="zayavkaText" type="text" name="zayavkaEmail" placeholder="Email"><em></em></span>
+			</div>
+				<div class="right_cont"><textarea name="remarks" placeholder="Комментарий к бронированию"></textarea>
+				<span class="privacy"><input class="zayavkaCheck1" type="checkbox" name="zayavkaAcceptPrivacy" id="Privacy" value="1"> Я ознакомлен, согласен и принимаю условия
+				<a href="/oferta/" target="_blank">Договора оферты</a>, <a href="/rules/" target="_blank">Правил охоты</a> и
+				<a href="/privacy/" target="_blank">Политики Конфиденциальности</a><em></em></span><br>
+			</div>
+			<br><input class="zayavkaButton" type="submit" name="zayavkaButton" value="Забронировать">
+		</div></div>
+	</form>
+</div></section>
+
+
+
+
+			<a name="scroll-comment"></a>
+		<span class="scrollto scroll-comment"></span>
+		<section id="section6" name="scroll-comment"><div class="container">
+			<h2>ОТЗЫВЫ</h2>
+
+			<div id="arrow_left"></div>
+			<div id="comments">
+				<div id="comments_container">
+
+				<div class="block">
+					<div class="image"><img src="/images/kuropach.png"><div class="fon"></div></div>
+					<div class="comm">
+						<p>
+							На прошлой охоте взяли трофейного лося. Услугами егерей очень довольны, работают профессионально.
+							Тушу разделали на месте. С нетерпением ждем открытие весеннего сезона.
+						</p>
+						<p class="caption">Сергей</p>
+					</div>
+				</div>
+				<div class="block">
+					<div class="image"><img src="/images/comment1.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p class="small">
+							Организация на уровне. Опыт охоты есть, так что точно могу сказать, что эта поездка удалась.
+							Плотность зверя хорошая, бери да стреляй. Уехали с мясом и отличными впечатлениями, довольные и отдохнувшие.
+							Благо и ехать не далеко по хорошей дороге.
+						</p>
+						<p class="caption">Валерий</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="image"><img src="/images/comment3.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>
+							Ходили нашей дружной компанией на зайца с гончими. Почти все в команде новички, поэтому помощь опытного егеря оценили.
+							Все прошло как по маслу, теперь можем похвастаться трофеем.
+						</p>
+						<p class="caption">Алексей</p>
+					</div>
+				</div>
+
+
+			<div class="block">
+					<div class="image"><img src="/images/otziv5.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p class="small">
+							Был в эти выходные с друзьями в гостях в «Давыдовском» уже второй раз, в первый день шел снег и ни на какую вышку зверь не вышел, на второй день на меня вышло стадо голов 25–30, и через 10 минут убежали оставив на «поле боя» одного собрата....
+							<a class="popup" href="#otziv_1">Подробнее...</a>
+
+						</p>
+						<p class="caption">AVilenich (Артак)</p>
+					</div>
+				</div>
+
+			<div class="block">
+					<div class="image"><img src="/images/otziv2.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p class="small">
+							В гостях в «Давыдовском» были три раза и собираемся в четвертый и в пятый...
+							С каждым приездом «Давыдовское» хорошеет: поставили новые вышки, сделали хороший ремонт на базе в Кондаково. И от Москвы близко. И цены не грабительские...
+							<a class="popup" href="#otziv_2">Подробнее...</a>
+
+						</p>
+						<p class="caption">Хэст (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="image"><img src="/images/otziv4.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>
+							Ну вот, закончилась моя однодневная охота. И закончилась, надо сказать, весьма продуктивно — одним выстрелом двух зайцев (двух кабанчиков).
+							При мне был карабин 30–06 кал., ночник и огромное желание добыть зверя... <a class="popup" href="#otziv_4">Подробнее...</a>
+
+						</p>
+						<p class="caption">Владимир</p>
+					</div>
+				</div>
+
+
+				<div class="block">
+
+					<div class="comm">
+						<p style="padding: 40px 30px 0 30px;">Были в хозяйстве в начале недели. Замечательно летал вальдшнеп. Видели много гусей. Организация хорошая...<br>
+							 <a class="popup" href="#otziv_11">Подробнее...</a>
+
+						</p>
+						<p class="caption">Babr (ник с форума)</p>
+					</div>
+				</div>
+
+
+				<div class="block">
+					<div class="image"><img src="/images/otziv7.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p class="small">
+							Взял прошлогодку у Андрея на 65 кг с вышки 10 числа.
+							Все как обычно в лучшем виде. Егерь нашел подранка по крови за 50 метров.
+							Первый раз в шею метил, чтобы мясо не портить, но видать промахнулся. Вторым выстрелом на бегу уже в заднюю ногу попал.
+							<noindex><a href="http://forum.guns.ru/forummessage/110/1617287-7.html#m44342800" target="_blank">Отзыв на форуме</a></noindex>
+						</p>
+						<p class="caption">sportivnii (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="image"><img src="/images/otziv10.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>
+							В очередной раз побывали в гостях в у Андрея, в Давыдовском, в кол-ве 1,5 человека))).
+							Напарник ПНВ выбирает, поэтому поехал "просто посмотреть", без карабина... <a class="popup" href="#otziv_10">Подробнее...</a>
+
+						</p>
+						<p class="caption">Хэст (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="image"><img src="/images/otziv8.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>
+							В ночь с субботы на воскресенье охотился в Давыдовском. Была сильная гроза. Но когда всё стихло и начало рассветать, появился кабанчик.
+							Выстрел оказался не совсем удачным. Кабан забился в конвульсиях... <a class="popup" href="#otziv_8">Подробнее...</a>
+
+						</p>
+						<p class="caption">A_NIK_77 (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="image"><img src="/images/otziv9.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>
+							Организация процесса отличная, зверь есть, ребята отрабатывают свои деньги на 100 процентов.
+							С удовольствием приеду ещё. Огромная благодарность всем участникам охоты... <a class="popup" href="#otziv_9">Подробнее...</a>
+						</p>
+						<p class="caption">vadvit (ник с форума)</p>
+					</div>
+				</div>
+
+
+				<div class="block">
+					<div class="image"><img src="/images/otziv6.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p class="small">
+							Огромное спасибо Охотхозяйству "Давыдовское"! Великолепные угодья и очень профессиональный персонал! Отдельное спасибо Фадеичеву Андрею! Все великолепно!
+							Уезжать было не охота! Открылись на все 5+! Трофеи замечательные!) <noindex><a href="https://vk.com/wall-96346628_236" rel="nofollow" target="_blank">https://vk.com/wall-96346628_236</a></noindex>
+
+						</p>
+						<p class="caption">Руслан</p>
+					</div>
+				</div>
+
+
+			</div></div>
+
+			<div id="arrow_right"></div>
+
+			<p class="text2">Оцените и вы охоту в «Давыдовском» <br>— забронируйте сегодня<br>
+			</p>
+
+			<div class="button scroll-order">Забронировать</div>
+
+		</div></section>
+
+
+				<div class="blockotziv" id="otziv_1">
+					<div class="image"><img src="/images/otziv5.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>Был в эти выходные с друзьями в гостях в «Давыдовском» уже второй раз, в первый день шел снег и ни на какую вышку зверь не вышел, на второй день на меня вышло стадо голов 25–30, и через 10 минут убежали оставив на «поле боя» одного собрата. Мы скидкой в 50% на обслуживание троих охотников не воспользовались, пусть в это будет наш маленький вклад, да и удовольствие и хорошее настроение стоят того!
+Желаю процветания!</p>
+
+						<p class="caption">AVilenich (Артак)</p>
+					</div>
+				</div>
+
+				<div class="blockotziv" id="otziv_2">
+					<div class="image"><img src="/images/otziv2.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>	В гостях в «Давыдовском» были три раза и собираемся в четвертый и в пятый...</p>
+						<p>С каждым приездом «Давыдовское» хорошеет: поставили новые вышки, сделали хороший ремонт на базе в Кондаково. И от Москвы близко. И цены не грабительские.</p>
+						<p>Со зверем тоже все отлично, хотя мы пока только на кабана приезжали.</p>
+						<p>В крайний наш приезд мне не повезло. На вышки сели в 16.30. Первый выход на меня в 18.00, стадо 7 голов, второй выход около 19 и третий в 20.00, во второй и третий раз стада были поменьше. Кормушка на расстоянии 55 м, по дальномеру. Но кабан видать уже настеганный, от включенной доп. подсветки моего ПНВ 1 поколения, разбегался по кустам, как стая воробьев из под ног. А вот мой напарник кабасика взял!!!
+						</p>
+
+						<p class="caption">Хэст (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="blockotziv" id="otziv_4">
+					<div class="image"><img src="/images/otziv4.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>	Ну вот, закончилась моя однодневная охота. И закончилась, надо сказать, весьма продуктивно — одним выстрелом двух зайцев (двух кабанчиков).
+							При мне был карабин 30–06 кал., ночник и огромное желание добыть зверя.<br> А теперь подробнее...</p>
+							<p>После 15:00 егерь отвез меня на вышку, а чрез пару–тройку часов услышал в лесу звук дерущихся секачей, но они на меня не вышли.</p>
+							<p>И ближе к семи вечера вышло стадо (свинья и 16 поросят). Зверь подошел не особо настороженно, поскольку дул сильный ветер от них и было достаточно темно. Выдержав достаточно времени, минут, примерно, 15–20, наблюдая за кабанами и, поймав момент, когда кабанчики станут вплотную друг к другу, сделал
+							выстрел. Два сеголетка сразу упали не сделав ни шагу. Калибр 30–06 рулит.</p>
+							<p>Про охотхозяйство могу сказать одно: понравилось то, что мне не навязывали никаких лишних услуг (таких как баня, сауна, бильярд и т.д.), все четко и по делу. Так что меня все устроило и я сюда обязательно вернусь. По питанию ничего сказать не могу, т.к. брал с собой термос и бутерброды (мой обычный охотничий набор).</p>
+							<p>Большое спасибо егерю Ивану настоящий профессионал своего дела!!! И отдельно благодарю руководителя Андрея за организацию сего мероприятия.<br>
+							Огромное спасибо! </p>
+
+						<p class="caption">Владимир</p>
+					</div>
+				</div>
+
+
+				<div class="blockotziv" id="otziv_8">
+					<div class="image"><img src="/images/otziv8.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>В ночь с субботы на воскресенье охотился в Давыдовском. Была сильная гроза. Но когда всё стихло и начало рассветать, появился кабанчик. </p>
+						<p>Выстрел оказался не совсем удачным. Кабан забился в конвульсиях, а потом стал кататься по траве пытаясь встать. Второй выстрел вроде успокоил его, но вдруг этот “робокоп” на левом боку !!! перебирая лапами уехал в лес. Причём сделал это неожиданно и очень быстро.</p>
+						<p>По следам и крови прошли около 500 метров и потеряли след на прошлогодней листве. Поехали за Тузиком - лайкой Ивана. Тузик с задачей справился.</p>
+						<p>Оказалось, что вторым выстрелом кабану перебило левую заднюю ногу и "ещё куда-то". При разделке уже не заморачивался. По моим прикидкам он прошёл около полутора-двух километров. И добирали живого.</p>
+
+						<p><noindex><a href="http://forum.guns.ru/forummessage/110/1617287-8.html#m44502117" rel="nofollow" target="_blank">Отзыв на форуме</a></noindex></p>
+						<p class="caption">A_NIK_77 (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="blockotziv" id="otziv_9">
+					<div class="image"><img src="/images/otziv9.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>Был в данном хозяйстве 29–30 июля сего года. Посещал его впервые. Решение поехать в Давыдовское принял после изучения информации с форума и разговора по телефону с Андреем — руководителем. Приехал на базу в Кондаково в районе 18.00 29.07.16, встретил Дмитрий, накормил (очень вкусно — поджарил фарш лось-кабан, лук, макароны) и после короткого отдыха выдвинулись на место. На УАЗ Буханке доехали до дома другого егеря, где пересели на другой более подготовленный УАЗ Буханку (прилично отлифтован, более мощный двигатель, ГУР руля, внедорожная резина) и уже на нем до вышки. Сразу уточню, на неподготовленном, даже УАЗе, до вышки не добраться — глухомань (наверное, в том числе и поэтому там зверь есть). Сел на вышку в районе 21.00. Вышка стационарная — крыша, дверь, скамья. До подкормочной площадки близко — метров 30. </p>
+						<p>В районе 22.00 по опушке леса вышли "мамка" и шесть подсвинков. Минут 15 любовался выходом и процессом кормежки, видимо подшумел, миг — и все сдернули в траву на опушку леса (в теплик и там были видны фрагментарно). Минут через 20, отстоявшись, опять по опушке начали выходить. Мамка впереди, по дуге левее вышки. Ветер был на вышку, метров 15 не дошла за вышку, тогда бы причухала. Теперь уже спокойно выбрав свинку, выстрелил. Ушла не далеко, но искали долго. Это уже моя вина, неверно показал направление отхода. Все стадо ушло к опушке, а моя, как стояла, по прямой в сторону. Это уже детали. </p>
+						<p>Резюме: организация процесса отличная, зверь есть, ребята отрабатывают свои деньги на 100 процентов. С удовольствием приеду ещё. Огромная благодарность всем участникам охоты, Спасибо!</p>
+
+						<p><noindex><a href="http://forum.guns.ru/forummessage/110/1617287-9.html#m44953132" rel="nofollow" target="_blank">Отзыв на форуме</a></noindex></p>
+						<p class="caption">vadvit (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="blockotziv" id="otziv_10">
+					<div class="image"><img src="/images/otziv10.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>В очередной раз побывали в гостях в у Андрея, в Давыдовском, в кол-ве 1,5 человека))). Напарник ПНВ выбирает, поэтому поехал "просто посмотреть", без карабина.</p>
+						<p>Охота длилась 1,5 часа. Сели в 17.00, первый выход через 10 мин, я только теплик (гляделку) приготовил, карабин еще не "нарядил". Но что-то их насторожило, ушли. Второй выход в 18.30...</p>
+						<p>Результат — замечательный 53-килограммовый сеголеток.</p>
+						<p>Все, как, впрочем, и всегда, ОТЛИЧНО!
+						</p>
+						<p><noindex><a href="http://forum.guns.ru/forummessage/110/1617287-11.html#m46710531" rel="nofollow" target="_blank">Отзыв на форуме</a></noindex></p>
+						<p class="caption">Хэст (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="blockotziv" id="otziv_11">
+
+					<div class="comm">
+						<p>Были в хозяйстве в начале недели. Замечательно летал вальдшнеп. Видели много гусей. Организация хорошая (спасибо Андрею). Гостиница нормальная.</p>
+<p>Отдельное спасибо егерям Дмитрию и Евгению за дружелюбное, спокойное отношение. Отдохнули хорошо. (В первый день, когда стояли на вальдшнепа немного подпортил охоту какой-то любопытный кабан, ходил метрах в сорока, то и дело подходил-отходил. Даже когда стреляли далеко не уходил, я его все время слышал...). Судя по следам зверя много.
+						</p>
+						<p><noindex><a href="http://forum.guns.ru/forummessage/110/1802719.html#m43811049" rel="nofollow" target="_blank">Отзыв на форуме</a></noindex></p>
+						<p class="caption">Babr (ник с форума)</p>
+					</div>
+				</div>
+
+
+		<a name="scroll-eger"></a>
+		<span class="scrollto scroll-eger"></span>
+		<section id="section7" name="scroll-eger"><div class="container">
+
+			<h2>Егеря</h2>
+
+			<div class="list">
+				<div class="block m1">
+					<img src="/images/semin.jpg" class="circle">
+					<h3>Семин Евгений</h3>
+					<p>Опыт охоты 27 лет</p>
+				</div>
+				<div class="block m2">
+					<img src="/images/svegaev.jpg" class="circle">
+					<h3>Свежаев Дмитрий</h3>
+					<p>Опыт охоты 14 лет</p>
+				</div>
+				<div class="block m3">
+					<img src="/images/fadeichev.jpg" class="circle">
+					<h3>Фадеичев Андрей</h3>
+					<p>Опыт охоты 18 лет</p>
+				</div>
+
+			</div>
+
+			<p class="text2">Охотьтесь с настоящими профессионалами <br>
+			— забронируйте не откладывая</p>
+
+			<div class="button scroll-order">Забронировать</div>
+
+		</div></section>
+
+
+		<section id="section8"><div class="container">
+
+			<h2 class="w3">Сезон охоты начался!<br>Осталось</h2>
+	    <div class="days">--133-</div>
+	    <div class="days1">лицензий</div>
+			<p class="text1 decor">Отдохните от работы и повседневных забот.<br>
+        Получите незабываемый отдых и памятные трофеи.</p>
+
+			<p class="text3">Бронируйте охоту уже сейчас!</p>
+
+			<br><br>
+			<div class="button scroll-order">Забронировать</div>
+    </div>
+        </section>
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?117"></script>
+
+
+
+        <div style="background-color: #1e2213; padding: 25px 0; width:100%;">
+
+<div id="vk_groups_new" style="margin: 0 auto; max-width: 1000px;"></div>
+
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups_new", {mode: 2, wide: 1, width: "auto", height: "500"}, 96346628);
+</script>
+        </div>
+
+
+
+
+		<section id="section10"><div class="container">
+<div id="gallary">
+	<div class="cont">
+		<div class="img"><img src="/images/gallary/10.jpg" alt>  <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/9.jpg" alt>  <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/8.jpg" alt> <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/7.jpg" alt>  <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/6.jpg" alt> <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/5.jpg" alt> <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/4.jpg" alt>  <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/3.jpg" alt> <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/2.jpg" alt>	 <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/1.jpg" alt> <div class="bg"></div></div>
+	</div>
+
+</div>
+
+
+
+
+<p class="text3">«Охота… сближает нас с природой, приучает нас к терпению,
+а иногда и к хладнокровию перед опасностью».</p>
+
+<p class="text4">Иван Сергеевич Тургенев</p>
+</div></section>
+
+	<!--section id="map" style="width:100%; height:600px;">
+
+	</section-->
+	<span class="scrollto scroll-map"></span>
+	<section class="second_page_shema type1"><div class="container">
+			<h2>Схема проезда</h2>
+			<div id="map" style="max-width:900px; height:500px; margin:20px auto 0 auto;"></div>
+
+		</div></section>
+
+		<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<script src="/js/map.js" type="text/javascript"></script>
+
+
+		<footer><div class="container">
+
+			<img class="logo" src="assets/logo2.png">
+
+			<nav id="nav_bottom">
+				<ul>
+					<li class="scroll-price">Цены</li>
+					<li class="scroll-promo">Спецпредложения</li>
+					<li class="scroll-comment">Отзывы</li>
+					<li class="scroll-eger">Егеря</li>
+				</ul>
+			</nav>
+
+			<div class="contacts">
+			Ярославская область, Борисоглебский район, село Кондаково<br>
+			ООО "Борисоглебский клуб охотников и рыболовов"<br>
+			ИНН 7614004994/КПП 761401001<br>
+			ОГРН 1087609002425<br>
+
+			<br><a href="/rules/" target="blanc">Правила охоты</a></div>
+			<a href="https://old.maps.yandex.ru/-/CVWDVFPK" target="blanc">Схема проезда</a></div>
+			<br>
+			<div class="phone"><!--+7 (962) 209-24-64<br-->+7 (905) 632-06-12</div>
+			<!--div class="phone">+7 (962) 209-24-64</div-->
+
+		   <br><br><div style="font-size:14px; color:#b08c58; max-width:550px; margin:0 auto;">Используя интернет ресурс davydovskoe.com, Вы соглашаетесь на обработку Ваших персональных данных (см. <a href="/privacy/" target="_blank">Политика конфиденциальности</a>), в противном случае Вы должны прекратить использование ресурса.</div>
+
+		  </footer>
+   </div>
+  <script src="polyfills-SCHOHYNV.js" type="module"></script><script src="main-5BTHSLHS.js" type="module"></script>
+
+
+
+
+
+
+
+	
+
+
+
+		
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"27":"t0"},"c":{"27":[{"i":"t0","r":1,"x":5}],"38":[]}}]}</script></body></html><!--html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+      <link href="/css/style.css?10" rel="stylesheet" type="text/css">
+
+
+
+    </head>
+    <body>
+    <div id="container">
+	<div class="top_mobile">
+        <div id="topHead"></div>
+        <section id="topMenu"><div class="container"></div></section>
+		<div class="nav_mobile"></div>
+	</div>
+        <div></div--><!--footer><div class="container"></div>
+
+		</footer>
+
+
+	</div>
+    </body>
+</html-->

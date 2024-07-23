@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+
+<html>
+	<head><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <vlad></vlad>
+    <meta charset="UTF-16">
+		<title>Vlad</title>
+    <style>@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2) format('woff2');unicode-range:U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2) format('woff2');unicode-range:U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTVOmu1aB.woff2) format('woff2');unicode-range:U+0302-0303, U+0305, U+0307-0308, U+0330, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2034-2037, U+2057, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2102, U+210A-210E, U+2110-2112, U+2115, U+2119-211D, U+2124, U+2128, U+212C-212D, U+212F-2131, U+2133-2138, U+213C-2140, U+2145-2149, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B6, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTUGmu1aB.woff2) format('woff2');unicode-range:U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8B1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA88, U+1FA90-1FABD, U+1FABF-1FAC5, U+1FACE-1FADB, U+1FAE0-1FAE8, U+1FAF0-1FAF8, U+1FB00-1FBFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2) format('woff2');unicode-range:U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2) format('woff2');unicode-range:U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2) format('woff2');unicode-range:U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTVOmu1aB.woff2) format('woff2');unicode-range:U+0302-0303, U+0305, U+0307-0308, U+0330, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2034-2037, U+2057, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2102, U+210A-210E, U+2110-2112, U+2115, U+2119-211D, U+2124, U+2128, U+212C-212D, U+212F-2131, U+2133-2138, U+213C-2140, U+2145-2149, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B6, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTUGmu1aB.woff2) format('woff2');unicode-range:U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8B1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA88, U+1FA90-1FABD, U+1FABF-1FAC5, U+1FACE-1FADB, U+1FAE0-1FAE8, U+1FAF0-1FAF8, U+1FB00-1FBFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2) format('woff2');unicode-range:U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2) format('woff2');unicode-range:U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2) format('woff2');unicode-range:U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTVOmu1aB.woff2) format('woff2');unicode-range:U+0302-0303, U+0305, U+0307-0308, U+0330, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2034-2037, U+2057, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2102, U+210A-210E, U+2110-2112, U+2115, U+2119-211D, U+2124, U+2128, U+212C-212D, U+212F-2131, U+2133-2138, U+213C-2140, U+2145-2149, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B6, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTUGmu1aB.woff2) format('woff2');unicode-range:U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8B1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA88, U+1FA90-1FABD, U+1FABF-1FAC5, U+1FACE-1FADB, U+1FAE0-1FAE8, U+1FAF0-1FAF8, U+1FB00-1FBFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2) format('woff2');unicode-range:U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!--link rel="stylesheet" type="text/css" href="/css/common.css" /-->
+<meta name="format-detection" content="telephone=no">
+
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+
+
+
+	<link rel="stylesheet" href="styles-MJWKRGQM.css">
+  </head>
+
+	<body>
+	 <div id="container">
+		<nav id="nav" class="type1"><div class="container">
+		<div class="callback">Обратный звонок</div>
+			<ul>
+				<li>Вид охоты
+					<ul class="sub">
+						<!--li><a href="/ohota-na-kabana/">Охота на кабана</a></li-->
+						<li><a href="/ohota-na-losya/">Охота на лося</a></li>
+						<li><a href="/ohota-na-gusya/">Охота на гуся</a></li>
+						<li><a href="/ohota-na-utku/">Охота на утку</a></li>
+						<li><a href="/ohota-na-gluharya/">Охота на глухаря</a></li>
+						<li><a href="/ohota-na-tetereva/">Охота на тетерева</a></li>
+						<li><a href="/rybalka/">Рыбалка</a></li>
+						<li><a href="/certificate/">Сертификаты</a></li>
+					</ul>
+				</li>
+				<li class="scroll-price">Цены</li>
+				<!--li class="scroll-promo">Спецпредложения</li-->
+				<li class="scroll-comment">Отзывы</li>
+				<!--li class="scroll-eger">Егеря</li-->
+				<li class="scroll-map">Схема проезда</li>
+				<li><a href="http://ferma.davydovskoe.com/prozhivanie/" target="_blank">Проживание</a></li>
+			</ul></div>
+		</nav>
+
+		<div class="formHide1 type2" id="callbackForm"><div class="container">
+	<div class="formHideClose1" id="formHideClose2"></div>
+	<h3>Обратный звонок</h3>
+
+
+</div></div>
+		<section id="section1"><div class="container">
+			<img class="logo" src="assets/logo1.png"/>
+			<h1>Охота и отдых для&nbsp;настоящих мужчин</h1>
+			<p class="caption">Охота в Ярославле, Борисоглебский район</p>
+			<p class="text5">+7 (962) 209-24-64<br>+7 (905) 632-06-12</p>
+		</div></section>
+
+		<section id="section9"><div class="container">
+			<h2>О нас</h2>
+		<ul>
+			<li class="block1">
+			Мы находимся
+			в Ярославской области,
+			Борисоглебский район —
+			расстояние до Москвы 230&nbsp;км
+			или 4,5&nbsp;часа езды.
+			</li>
+			<li class="block2">
+			Площадь охотничьих угодий
+			составляет 17,2&nbsp;тыс.&nbsp;га —
+			настоящее раздолье
+			для охотников и рыболовов
+			</li>
+			<li class="block3">
+			Разнообразный ландшафт:
+			от глухих лесов и болот
+			до обработанных полей,
+			в сосновых борах
+			много ягод и грибов
+			</li>
+			<li class="block4">
+			Всевозможные виды
+			промысловых зверей и птиц:
+			лось, кабан, медведь, рысь,
+			волк, лиса, заяц, гусь, глухарь,
+			тетерев, рябчик
+			</li>
+			<li class="block5">
+			В чистейшей реке и прудах
+			водится рыба: карп, карась, щука,
+			лещ, плотва, голавль,
+			хариус, раки
+			</li>
+			<li class="block6">
+			Рядом туристические
+			достопримечательности:
+			Борисоглебский Кремль,
+			святые источники, усадьба
+			графа Шереметьева
+			</li>
+		</ul>
+
+</div></section>
+
+<a name="scroll-promo"></a>
+		<span class="scrollto scroll-promo"></span>
+		<section id="section5" name="scroll-promo"><div class="container">
+			<p class="text3">Специальное предложение!</p>
+			<h2 class="type2">Охота на&nbsp;Кабана</h2>
+
+
+			<p class="text8">ВЫ ПОЛУЧАЕТЕ:</p>
+			<ul>
+				<li>Необычное захватывающее<br>
+				приключение</li>
+
+				<li>Отличный трофей<br>
+				по окончании охоты</li>
+
+				<li>Потрясающие эмоции<br>
+				и адреналин</li>
+
+				<li>Мясо обладающее исключительными вкусовыми качествами</li>
+			</ul>
+
+			<!--p class="text4" style="font-weight:600; margin:20px 0 0px 0;">Обслуживание — 3 000 руб. за ночь.<br>
+			Трофей — от 10 000 до 35 000 руб.</p-->
+
+			<!--p class="text4" style="color:red; font-weight:600; margin:20px 0 0px 0;">Охота закрыта</p-->
+
+			<p class="text8">От нас:</p>
+
+			<p class="text7" style="margin:30px 0 0 0;">Опытный егерь
+			<br>и богатые зверем частные угодья!</p>
+
+<p class="text9" style="margin:50px 0 0 0;">Подробности по почте fadeichev@yandex.ru</p>
+<p class="text10">+7 (962) 209-24-64<br>+7 (905) 632-06-12</p>
+			<br><br>
+			<!--div class="button scroll-order">Забронировать</div-->
+
+
+		</div></section>
+
+
+
+
+
+		<section id="section3"><div class="container">
+			<h2 class="arrow">Почему нас выбирают</h2>
+
+			<div class="list">
+				<div class="block m1">
+					<h3>Угодья, богатые зверем</h3>
+					<p>никто не уйдёт<br> без добычи</p>
+				</div>
+				<div class="block m2">
+					<h3>Возможность отдохнуть</h3>
+					<p>от семейных забот<br> и домашнего<br> быта</p>
+				</div>
+				<div class="block m3">
+					<h3>Недорогие лицензии на охоту</h3>
+					<p>минимальная<br> цена на дичь</p>
+				</div>
+				<div class="block m4">
+					<h3>Природа, не тронутая цивилизацией</h3>
+				</div>
+				<div class="block m5">
+					<h3>Настоящие охотничьи домики</h3>
+					<p>чтобы как следует<br> отпраздновать<br> удачную охоту</p>
+				</div>
+				<div class="block m6">
+					<h3>Возможность порыбачить на речке</h3>
+					<p>со своими<br> снастями</p>
+				</div>
+			</div>
+
+			<p class="text2">Забронируйте лучший отдых</p>
+			<div class="button scroll-order">Забронировать</div>
+		</div></section>
+
+		<a name="scroll-price"></a>
+		<span class="scrollto scroll-price"></span>
+		<section id="section4" name="scroll-price"><div class="container">
+			<h2 class="arrow1">Цены на услуги</h2>
+
+			<div class="price">
+				<div class="block m1">
+					<h3><a href="/ohota-na-kabana/">Охота на кабана</a></h3>
+					<!--p>Охота закрыта</p-->
+					<table>
+						<tr><td>до 20 кг </td> <td>10 000 руб.</td></tr>
+						<tr><td>до 40 кг </td> <td>15 000 руб.</td></tr>
+						<tr><td>до 60 кг </td> <td>20 000 руб.</td></tr>
+						<tr><td>до 80 кг </td> <td>25 000 руб.</td></tr>
+						<tr><td>до 100 кг </td> <td>30 000 руб.</td></tr>
+						<tr><td>Секач от 100 до 120 кг</td> <td>35 000 руб.</td></tr>
+						<tr><td>Секач от 120 до 140 кг</td> <td>40 000 руб.</td></tr>
+						<tr><td>Секач от 140 до 160 кг</td> <td>45 000 руб.</td></tr>
+						<tr><td colspan="2">Доплата за трофей + 1000 руб. <br>за каждый видимый см. клыка</td></tr>
+						<tr><td><br>Отстрел половозрелой свиньи<br> весом от 80 кг. Мясо отпускается<br>за дополнительную плату по весу</td> <td><br>50 000 руб.</td></tr>
+					</table>
+				</div>
+				<div class="block m2">
+					<h3><a href="/ohota-na-losya/">Охота на лося</a></h3>
+					<table>
+						<tr><td>На реву</td> <td></td></tr>
+						<tr><td>взрослый до 5 отростков</td> <td>80 000 руб.</td></tr>
+						<tr><td>от 5 до 8 отростков</td> <td>90 000 руб.</td></tr>
+						<tr><td>от 8 до 10 отростков</td> <td>100 000 руб. </td></tr>
+						<tr><td>более 10 отростков</td> <td>120 000 руб.</td></tr>
+						<tr><td>&nbsp;</td> <td></td></tr>
+						<tr><td>Загоном</td> <td></td></tr>
+						<tr><td>сеголеток (до года) </td> <td>45 000 руб.</td></tr>
+						<tr><td>взрослый (до двух лет) </td> <td>75 000 руб.</td></tr>
+						<tr><td>взрослый<br>(более двух лет) </td> <td>80 000 руб.</td></tr>
+						<tr><td>самка лося (корова) </td> <td>150 000 руб.</td></tr>
+
+						<!--tr><td>лось</td> <td>50 000 руб.</td></tr>
+						<tr><td>трофейный лось<br>(от 5 отростков)</td> <td>60 000 руб.</td></tr>
+						<tr><td>до года</td> <td>25 000 руб.</td></tr>
+						<tr><td>самка лося</td> <td>70 000 руб.</td></tr-->
+					</table>
+				</div>
+				<div class="block m3">
+					<h3>Охота на пушнину</h3>
+					<table>
+						<tr><td>волк</td> <td>15000 руб., </td></tr>
+						<tr><td>заяц</td> <td>1000 руб., </td></tr>
+						<tr><td>куница</td> <td>2000 руб., </td></tr>
+						<tr><td>лиса</td> <td>1000 руб.,</td></tr>
+						<tr><td>бобер</td> <td>5000 руб.</td></tr>
+					</table>
+				</div>
+				<div class="block m4">
+					<h3>Охота на птицу</h3>
+					<table>
+						<tr><td><a href="/ohota-na-gusya/">гусь</a></td> <td>1000 руб. сутки; 5000 руб. сезон</td></tr>
+						<!--tr><td><a href="/ohota-na-utku/">утка</a></td> <td>1000 руб.<br></td></tr-->
+						<tr><td><a href="/ohota-na-utku/">утка</a></td> <td>1000 руб. сутки; 5000 руб. сезон</td></tr>
+						<tr><td>вальдшнеп</td> <td>500 руб. сутки; 3000 руб. сезон</td></tr>
+						<tr><td><a href="/ohota-na-gluharya/">глухарь</a></td> <td>10 000 руб.</td></tr>
+						<tr><td><a href="/ohota-na-tetereva/">тетерев</a></td> <td>5000 руб.</td></tr>
+					</table>
+
+				</div>
+
+				<!--div class="block m41">
+					<h3>Охота на пятнистого оленя</h3>
+					<table>
+						<tr><td>Сеголеток</td> <td>28 000 руб.,</td></tr>
+						<tr><td>Шильник</td> <td>38 000 руб.,</td></tr>
+						<tr><td>Самец от 3-х лет, до 3-х отростков</td> <td>50 000 руб.,</td></td></tr>
+						<tr><td>Трофейный 4 отростка</td> <td>80 000 руб.,</td></tr>
+						<tr><td>Самка старше года</td> <td>80 000 руб.</td></tr>
+					</table>
+
+				</div-->
+
+				<div class="block m5">
+					<h3>Организация охоты</h3>
+					<table>
+						<tr><td>Коллективное обслуживание<br>(от 2 человек) </td> <td>4500 руб.<br>чел./день</td></tr>
+
+						<tr><td><br>Индивидуальное обслуживание<br>(транспорт, сопровождение егерем)</td> <td><br>5000 руб.<br>чел./день</td></tr>
+
+						<tr><td><br>Аренда снегохода</td> <td><br>5000 руб./день</td></tr>
+
+						<tr><td><br>Обслуживание охоты на утку, гуся<br>(транспорт, шалаш). Выходные (сб-вс)</td> <td><br>10 000 руб.<br>чел./день;</td></tr>
+
+						<tr><td><br>Будние дни (пн-пт)</td> <td><br>5000 руб.<br>чел./день;</td></tr>
+						<tr><td><br>Проживание</td> <td><br>1000 руб.</td></tr>
+						<tr><td><br>Разделка мяса</td> <td><br>5000 руб.</td></tr>
+
+					</table>
+				</div>
+				<div class="block m6">
+					<h3>Штрафы</h3>
+					<table>
+						<!--tr><td>Отказ от выстрела или промах<br>
+						оплачивается как 25% от стоимости<br>
+						лицензии.</td></tr-->
+
+						<tr><td>Промах — 25% от стоимости<br>
+						лицензии.</td></tr>
+
+						<tr><td><br>Подранок — 100% лицензии, возможен<br>
+						добор на следующий день.</td></tr>
+
+						<tr><td><br>Нарушение <a href="/rules/">техники безопасности</a> - 7000 руб.</td></tr>
+
+					</table>
+				</div>
+
+			</div>
+
+			<p class="text2">Успейте забронировать по самым низким ценам</p>
+			<div class="button scroll-order">Забронировать</div>
+		</div></section>
+
+
+		<section id="section2"><div class="container">
+	<a name="scroll-order"></a>
+	<span class="scrollto scroll-order"></span>
+	<p class="text61">Успейте забронировать охоту<br> до конца сезона!</p>
+	<form class="zayavka m4 type2 test" action="" method="POST" enctype="multipart/form-data">
+
+	<div class="licence"><p>Забронировано 233 лицензий</p></div>
+		<span>Вид охоты (зверь):<br><input class="zayavkaText" type="text" name="zayavkaAnimal" placeholder="Охота на кабана" value=""/><em></em></span>
+		<span>Дата охоты:<br><input class="zayavkaText" type="text" name="data" placeholder="Дата охоты" value="23.07.2024" id="datepicker"/><em></em></span><br>
+		<span>Количество человек:<br><input class="zayavkaText mask_number" type="text" name="person" placeholder="Количество человек" value="1"/><em></em></span>
+		<span>Количество дней:<br><input class="zayavkaText mask_number" type="text" name="days" placeholder="Количество дней" value="1"/><em></em></span><br>
+
+		<input type="hidden" name="uid" value="1262924058669e9630599f9"/>
+		<input type="hidden" name="order_price" value="5000"/>
+		<input class="zayavkaCheck" type="checkbox" name="hotel" value="on" id="hotel_check"/><label for="hotel_check"> С проживанием</label>
+		<div class="price"><span class="caption">Стоимость бронирования:</span> <span class="num"><span class="order_price">5 000</span> руб.</span></div>
+		<!--div class="price"><span class="caption">Общая стоимость обслуживания и проживания составит:</span> <span class="order_price_total">3 000</span> <span>руб.</span></div-->
+
+
+		<div class="button formOpen">Оформить заявку</div>
+
+		<div class="formHide1" id="calcForm"><div class="container">
+			<div class="formHideClose1" id="formHideClose1"></div>
+			<h3>Забронировать охоту</h3>
+			<!--p>Заезд <i class="idate_in">07.07.2016</i>; для <i class="ipersons">4 человек</i> на <i class="idays">4 дня</i>;</p>
+			<p>Стоимость бронирования: <i class="num"><i class="order_price">4 000</i> руб.</i></p-->
+
+			<p>дата охоты <i class="idate_in">07.07.2016</i> | <i class="ipersons">4 человека</i> | <i class="idays">4 дня</i> | предоплата <i class="order_price">4 000</i> руб.</p>
+
+			<div class="left_cont">
+				<span><input class="zayavkaText" type="text" name="zayavkaName" placeholder="Имя"/><em></em></span>
+				<span><input class="zayavkaText" type="text" name="zayavkaPhone" placeholder="Телефон" id="mask_phone1"/><em></em></span>
+				<span><input class="zayavkaText" type="text" name="zayavkaEmail" placeholder="Email"/><em></em></span>
+			</div>
+				<div class="right_cont"><textarea name="remarks" placeholder="Комментарий к бронированию"></textarea>
+				<span class="privacy"><input class="zayavkaCheck1" type="checkbox" name="zayavkaAcceptPrivacy" id="Privacy" value="1"/> Я ознакомлен, согласен и принимаю условия
+				<a href="/oferta/" target="_blank">Договора оферты</a>, <a href="/rules/" target="_blank">Правил охоты</a> и
+				<a href="/privacy/" target="_blank">Политики Конфиденциальности</a><em></em></span><br>
+			</div>
+			<br><input class="zayavkaButton" type="submit" name="zayavkaButton" value="Забронировать"/>
+		</div></div>
+	</form>
+</div></section>
+
+
+
+
+			<a name="scroll-comment"></a>
+		<span class="scrollto scroll-comment"></span>
+		<section id="section6" name="scroll-comment"><div class="container">
+			<h2>ОТЗЫВЫ</h2>
+
+			<div id="arrow_left"></div>
+			<div id="comments">
+				<div id="comments_container">
+
+				<div class="block">
+					<div class="image"><img src="/images/kuropach.png"><div class="fon"></div></div>
+					<div class="comm">
+						<p>
+							На прошлой охоте взяли трофейного лося. Услугами егерей очень довольны, работают профессионально.
+							Тушу разделали на месте. С нетерпением ждем открытие весеннего сезона.
+						</p>
+						<p class="caption">Сергей</p>
+					</div>
+				</div>
+				<div class="block">
+					<div class="image"><img src="/images/comment1.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p class="small">
+							Организация на уровне. Опыт охоты есть, так что точно могу сказать, что эта поездка удалась.
+							Плотность зверя хорошая, бери да стреляй. Уехали с мясом и отличными впечатлениями, довольные и отдохнувшие.
+							Благо и ехать не далеко по хорошей дороге.
+						</p>
+						<p class="caption">Валерий</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="image"><img src="/images/comment3.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>
+							Ходили нашей дружной компанией на зайца с гончими. Почти все в команде новички, поэтому помощь опытного егеря оценили.
+							Все прошло как по маслу, теперь можем похвастаться трофеем.
+						</p>
+						<p class="caption">Алексей</p>
+					</div>
+				</div>
+
+
+			<div class="block">
+					<div class="image"><img src="/images/otziv5.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p class="small">
+							Был в эти выходные с друзьями в гостях в «Давыдовском» уже второй раз, в первый день шел снег и ни на какую вышку зверь не вышел, на второй день на меня вышло стадо голов 25–30, и через 10 минут убежали оставив на «поле боя» одного собрата....
+							<a class="popup" href="#otziv_1">Подробнее...</a>
+
+						</p>
+						<p class="caption">AVilenich (Артак)</p>
+					</div>
+				</div>
+
+			<div class="block">
+					<div class="image"><img src="/images/otziv2.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p class="small">
+							В гостях в «Давыдовском» были три раза и собираемся в четвертый и в пятый...
+							С каждым приездом «Давыдовское» хорошеет: поставили новые вышки, сделали хороший ремонт на базе в Кондаково. И от Москвы близко. И цены не грабительские...
+							<a class="popup" href="#otziv_2">Подробнее...</a>
+
+						</p>
+						<p class="caption">Хэст (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="image"><img src="/images/otziv4.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>
+							Ну вот, закончилась моя однодневная охота. И закончилась, надо сказать, весьма продуктивно — одним выстрелом двух зайцев (двух кабанчиков).
+							При мне был карабин 30–06 кал., ночник и огромное желание добыть зверя... <a class="popup" href="#otziv_4">Подробнее...</a>
+
+						</p>
+						<p class="caption">Владимир</p>
+					</div>
+				</div>
+
+
+				<div class="block">
+
+					<div class="comm">
+						<p style="padding: 40px 30px 0 30px;">Были в хозяйстве в начале недели. Замечательно летал вальдшнеп. Видели много гусей. Организация хорошая...<br>
+							 <a class="popup" href="#otziv_11">Подробнее...</a>
+
+						</p>
+						<p class="caption">Babr (ник с форума)</p>
+					</div>
+				</div>
+
+
+				<div class="block">
+					<div class="image"><img src="/images/otziv7.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p class="small">
+							Взял прошлогодку у Андрея на 65 кг с вышки 10 числа.
+							Все как обычно в лучшем виде. Егерь нашел подранка по крови за 50 метров.
+							Первый раз в шею метил, чтобы мясо не портить, но видать промахнулся. Вторым выстрелом на бегу уже в заднюю ногу попал.
+							<noindex><a href="http://forum.guns.ru/forummessage/110/1617287-7.html#m44342800" target="_blank">Отзыв на форуме</a></noindex>
+						</p>
+						<p class="caption">sportivnii (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="image"><img src="/images/otziv10.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>
+							В очередной раз побывали в гостях в у Андрея, в Давыдовском, в кол-ве 1,5 человека))).
+							Напарник ПНВ выбирает, поэтому поехал "просто посмотреть", без карабина... <a class="popup" href="#otziv_10">Подробнее...</a>
+
+						</p>
+						<p class="caption">Хэст (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="image"><img src="/images/otziv8.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>
+							В ночь с субботы на воскресенье охотился в Давыдовском. Была сильная гроза. Но когда всё стихло и начало рассветать, появился кабанчик.
+							Выстрел оказался не совсем удачным. Кабан забился в конвульсиях... <a class="popup" href="#otziv_8">Подробнее...</a>
+
+						</p>
+						<p class="caption">A_NIK_77 (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="image"><img src="/images/otziv9.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>
+							Организация процесса отличная, зверь есть, ребята отрабатывают свои деньги на 100 процентов.
+							С удовольствием приеду ещё. Огромная благодарность всем участникам охоты... <a class="popup" href="#otziv_9">Подробнее...</a>
+						</p>
+						<p class="caption">vadvit (ник с форума)</p>
+					</div>
+				</div>
+
+
+				<div class="block">
+					<div class="image"><img src="/images/otziv6.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p class="small">
+							Огромное спасибо Охотхозяйству "Давыдовское"! Великолепные угодья и очень профессиональный персонал! Отдельное спасибо Фадеичеву Андрею! Все великолепно!
+							Уезжать было не охота! Открылись на все 5+! Трофеи замечательные!) <noindex><a href="https://vk.com/wall-96346628_236" rel="nofollow" target="_blank">https://vk.com/wall-96346628_236</a></noindex>
+
+						</p>
+						<p class="caption">Руслан</p>
+					</div>
+				</div>
+
+
+			</div></div>
+
+			<div id="arrow_right"></div>
+
+			<p class="text2">Оцените и вы охоту в «Давыдовском» <br>— забронируйте сегодня<br>
+			</p>
+
+			<div class="button scroll-order">Забронировать</div>
+
+		</div></section>
+
+
+				<div class="blockotziv" id="otziv_1">
+					<div class="image"><img src="/images/otziv5.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>Был в эти выходные с друзьями в гостях в «Давыдовском» уже второй раз, в первый день шел снег и ни на какую вышку зверь не вышел, на второй день на меня вышло стадо голов 25–30, и через 10 минут убежали оставив на «поле боя» одного собрата. Мы скидкой в 50% на обслуживание троих охотников не воспользовались, пусть в это будет наш маленький вклад, да и удовольствие и хорошее настроение стоят того!
+Желаю процветания!</p>
+
+						<p class="caption">AVilenich (Артак)</p>
+					</div>
+				</div>
+
+				<div class="blockotziv" id="otziv_2">
+					<div class="image"><img src="/images/otziv2.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>	В гостях в «Давыдовском» были три раза и собираемся в четвертый и в пятый...</p>
+						<p>С каждым приездом «Давыдовское» хорошеет: поставили новые вышки, сделали хороший ремонт на базе в Кондаково. И от Москвы близко. И цены не грабительские.</p>
+						<p>Со зверем тоже все отлично, хотя мы пока только на кабана приезжали.</p>
+						<p>В крайний наш приезд мне не повезло. На вышки сели в 16.30. Первый выход на меня в 18.00, стадо 7 голов, второй выход около 19 и третий в 20.00, во второй и третий раз стада были поменьше. Кормушка на расстоянии 55 м, по дальномеру. Но кабан видать уже настеганный, от включенной доп. подсветки моего ПНВ 1 поколения, разбегался по кустам, как стая воробьев из под ног. А вот мой напарник кабасика взял!!!
+						</p>
+
+						<p class="caption">Хэст (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="blockotziv" id="otziv_4">
+					<div class="image"><img src="/images/otziv4.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>	Ну вот, закончилась моя однодневная охота. И закончилась, надо сказать, весьма продуктивно — одним выстрелом двух зайцев (двух кабанчиков).
+							При мне был карабин 30–06 кал., ночник и огромное желание добыть зверя.<br> А теперь подробнее...</p>
+							<p>После 15:00 егерь отвез меня на вышку, а чрез пару–тройку часов услышал в лесу звук дерущихся секачей, но они на меня не вышли.</p>
+							<p>И ближе к семи вечера вышло стадо (свинья и 16 поросят). Зверь подошел не особо настороженно, поскольку дул сильный ветер от них и было достаточно темно. Выдержав достаточно времени, минут, примерно, 15–20, наблюдая за кабанами и, поймав момент, когда кабанчики станут вплотную друг к другу, сделал
+							выстрел. Два сеголетка сразу упали не сделав ни шагу. Калибр 30–06 рулит.</p>
+							<p>Про охотхозяйство могу сказать одно: понравилось то, что мне не навязывали никаких лишних услуг (таких как баня, сауна, бильярд и т.д.), все четко и по делу. Так что меня все устроило и я сюда обязательно вернусь. По питанию ничего сказать не могу, т.к. брал с собой термос и бутерброды (мой обычный охотничий набор).</p>
+							<p>Большое спасибо егерю Ивану настоящий профессионал своего дела!!! И отдельно благодарю руководителя Андрея за организацию сего мероприятия.<br>
+							Огромное спасибо! </p>
+
+						<p class="caption">Владимир</p>
+					</div>
+				</div>
+
+
+				<div class="blockotziv" id="otziv_8">
+					<div class="image"><img src="/images/otziv8.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>В ночь с субботы на воскресенье охотился в Давыдовском. Была сильная гроза. Но когда всё стихло и начало рассветать, появился кабанчик. </p>
+						<p>Выстрел оказался не совсем удачным. Кабан забился в конвульсиях, а потом стал кататься по траве пытаясь встать. Второй выстрел вроде успокоил его, но вдруг этот “робокоп” на левом боку !!! перебирая лапами уехал в лес. Причём сделал это неожиданно и очень быстро.</p>
+						<p>По следам и крови прошли около 500 метров и потеряли след на прошлогодней листве. Поехали за Тузиком - лайкой Ивана. Тузик с задачей справился.</p>
+						<p>Оказалось, что вторым выстрелом кабану перебило левую заднюю ногу и "ещё куда-то". При разделке уже не заморачивался. По моим прикидкам он прошёл около полутора-двух километров. И добирали живого.</p>
+
+						<p><noindex><a href="http://forum.guns.ru/forummessage/110/1617287-8.html#m44502117" rel="nofollow" target="_blank">Отзыв на форуме</a></noindex></p>
+						<p class="caption">A_NIK_77 (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="blockotziv" id="otziv_9">
+					<div class="image"><img src="/images/otziv9.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>Был в данном хозяйстве 29–30 июля сего года. Посещал его впервые. Решение поехать в Давыдовское принял после изучения информации с форума и разговора по телефону с Андреем — руководителем. Приехал на базу в Кондаково в районе 18.00 29.07.16, встретил Дмитрий, накормил (очень вкусно — поджарил фарш лось-кабан, лук, макароны) и после короткого отдыха выдвинулись на место. На УАЗ Буханке доехали до дома другого егеря, где пересели на другой более подготовленный УАЗ Буханку (прилично отлифтован, более мощный двигатель, ГУР руля, внедорожная резина) и уже на нем до вышки. Сразу уточню, на неподготовленном, даже УАЗе, до вышки не добраться — глухомань (наверное, в том числе и поэтому там зверь есть). Сел на вышку в районе 21.00. Вышка стационарная — крыша, дверь, скамья. До подкормочной площадки близко — метров 30. </p>
+						<p>В районе 22.00 по опушке леса вышли "мамка" и шесть подсвинков. Минут 15 любовался выходом и процессом кормежки, видимо подшумел, миг — и все сдернули в траву на опушку леса (в теплик и там были видны фрагментарно). Минут через 20, отстоявшись, опять по опушке начали выходить. Мамка впереди, по дуге левее вышки. Ветер был на вышку, метров 15 не дошла за вышку, тогда бы причухала. Теперь уже спокойно выбрав свинку, выстрелил. Ушла не далеко, но искали долго. Это уже моя вина, неверно показал направление отхода. Все стадо ушло к опушке, а моя, как стояла, по прямой в сторону. Это уже детали. </p>
+						<p>Резюме: организация процесса отличная, зверь есть, ребята отрабатывают свои деньги на 100 процентов. С удовольствием приеду ещё. Огромная благодарность всем участникам охоты, Спасибо!</p>
+
+						<p><noindex><a href="http://forum.guns.ru/forummessage/110/1617287-9.html#m44953132" rel="nofollow" target="_blank">Отзыв на форуме</a></noindex></p>
+						<p class="caption">vadvit (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="blockotziv" id="otziv_10">
+					<div class="image"><img src="/images/otziv10.jpg"><div class="fon"></div></div>
+					<div class="comm">
+						<p>В очередной раз побывали в гостях в у Андрея, в Давыдовском, в кол-ве 1,5 человека))). Напарник ПНВ выбирает, поэтому поехал "просто посмотреть", без карабина.</p>
+						<p>Охота длилась 1,5 часа. Сели в 17.00, первый выход через 10 мин, я только теплик (гляделку) приготовил, карабин еще не "нарядил". Но что-то их насторожило, ушли. Второй выход в 18.30...</p>
+						<p>Результат — замечательный 53-килограммовый сеголеток.</p>
+						<p>Все, как, впрочем, и всегда, ОТЛИЧНО!
+						</p>
+						<p><noindex><a href="http://forum.guns.ru/forummessage/110/1617287-11.html#m46710531" rel="nofollow" target="_blank">Отзыв на форуме</a></noindex></p>
+						<p class="caption">Хэст (ник с форума)</p>
+					</div>
+				</div>
+
+				<div class="blockotziv" id="otziv_11">
+
+					<div class="comm">
+						<p>Были в хозяйстве в начале недели. Замечательно летал вальдшнеп. Видели много гусей. Организация хорошая (спасибо Андрею). Гостиница нормальная.</p>
+<p>Отдельное спасибо егерям Дмитрию и Евгению за дружелюбное, спокойное отношение. Отдохнули хорошо. (В первый день, когда стояли на вальдшнепа немного подпортил охоту какой-то любопытный кабан, ходил метрах в сорока, то и дело подходил-отходил. Даже когда стреляли далеко не уходил, я его все время слышал...). Судя по следам зверя много.
+						</p>
+						<p><noindex><a href="http://forum.guns.ru/forummessage/110/1802719.html#m43811049" rel="nofollow" target="_blank">Отзыв на форуме</a></noindex></p>
+						<p class="caption">Babr (ник с форума)</p>
+					</div>
+				</div>
+
+
+		<a name="scroll-eger"></a>
+		<span class="scrollto scroll-eger"></span>
+		<section id="section7" name="scroll-eger"><div class="container">
+
+			<h2>Егеря</h2>
+
+			<div class="list">
+				<div class="block m1">
+					<img src="/images/semin.jpg" class="circle">
+					<h3>Семин Евгений</h3>
+					<p>Опыт охоты 27 лет</p>
+				</div>
+				<div class="block m2">
+					<img src="/images/svegaev.jpg" class="circle">
+					<h3>Свежаев Дмитрий</h3>
+					<p>Опыт охоты 14 лет</p>
+				</div>
+				<div class="block m3">
+					<img src="/images/fadeichev.jpg" class="circle">
+					<h3>Фадеичев Андрей</h3>
+					<p>Опыт охоты 18 лет</p>
+				</div>
+
+			</div>
+
+			<p class="text2">Охотьтесь с настоящими профессионалами <br>
+			— забронируйте не откладывая</p>
+
+			<div class="button scroll-order">Забронировать</div>
+
+		</div></section>
+
+
+		<section id="section8"><div class="container">
+
+			<h2 class="w3">Сезон охоты начался!<br>Осталось</h2>
+	    <div class="days">--133-</div>
+	    <div class="days1">лицензий</div>
+			<p class="text1 decor">Отдохните от работы и повседневных забот.<br>
+        Получите незабываемый отдых и памятные трофеи.</p>
+
+			<p class="text3">Бронируйте охоту уже сейчас!</p>
+
+			<br><br>
+			<div class="button scroll-order">Забронировать</div>
+    </div>
+        </section>
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?117"></script>
+
+
+
+        <div style="background-color: #1e2213; padding: 25px 0; width:100%;">
+
+<div id="vk_groups_new" style="margin: 0 auto; max-width: 1000px;"></div>
+
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups_new", {mode: 2, wide: 1, width: "auto", height: "500"}, 96346628);
+</script>
+        </div>
+
+
+
+
+		<section id="section10"><div class="container">
+<div id="gallary">
+	<div class="cont">
+		<div class="img"><img src="/images/gallary/10.jpg" alt=""/>  <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/9.jpg" alt=""/>  <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/8.jpg" alt=""/> <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/7.jpg" alt=""/>  <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/6.jpg" alt=""/> <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/5.jpg" alt=""/> <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/4.jpg" alt=""/>  <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/3.jpg" alt=""/> <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/2.jpg" alt=""/>	 <div class="bg"></div></div>
+		<div class="img"><img src="/images/gallary/1.jpg" alt=""/> <div class="bg"></div></div>
+	</div>
+
+</div>
+
+
+
+
+<p class="text3">«Охота… сближает нас с природой, приучает нас к терпению,
+а иногда и к хладнокровию перед опасностью».</p>
+
+<p class="text4">Иван Сергеевич Тургенев</p>
+</div></section>
+
+	<!--section id="map" style="width:100%; height:600px;">
+
+	</section-->
+	<span class="scrollto scroll-map"></span>
+	<section class="second_page_shema type1"><div class="container">
+			<h2>Схема проезда</h2>
+			<div id="map" style="max-width:900px; height:500px; margin:20px auto 0 auto;"></div>
+
+		</div></section>
+
+		<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<script src="/js/map.js" type="text/javascript"></script>
+
+
+		<footer><div class="container">
+
+			<img class="logo" src="assets/logo2.png"/>
+
+			<nav id="nav_bottom">
+				<ul>
+					<li class="scroll-price">Цены</li>
+					<li class="scroll-promo">Спецпредложения</li>
+					<li class="scroll-comment">Отзывы</li>
+					<li class="scroll-eger">Егеря</li>
+				</ul>
+			</nav>
+
+			<div class="contacts">
+			Ярославская область, Борисоглебский район, село Кондаково<br>
+			ООО "Борисоглебский клуб охотников и рыболовов"<br>
+			ИНН 7614004994/КПП 761401001<br>
+			ОГРН 1087609002425<br>
+
+			<br><a href="/rules/" target="blanc">Правила охоты</a></div>
+			<a href="https://old.maps.yandex.ru/-/CVWDVFPK" target="blanc">Схема проезда</a></div>
+			<br>
+			<div class="phone"><!--+7 (962) 209-24-64<br-->+7 (905) 632-06-12</div>
+			<!--div class="phone">+7 (962) 209-24-64</div-->
+
+		   <br><br><div style="font-size:14px; color:#b08c58; max-width:550px; margin:0 auto;">Используя интернет ресурс davydovskoe.com, Вы соглашаетесь на обработку Ваших персональных данных (см. <a href="/privacy/" target="_blank">Политика конфиденциальности</a>), в противном случае Вы должны прекратить использование ресурса.</div>
+
+		  </footer>
+   </div>
+  <script src="polyfills-SCHOHYNV.js" type="module"></script><script src="main-5BTHSLHS.js" type="module"></script></body>
+
+</html>
+
+
+
+
+
+	<!--html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+      <link href="/css/style.css?10" rel="stylesheet" type="text/css">
+
+
+
+    </head>
+    <body>
+    <div id="container">
+	<div class="top_mobile">
+        <div id="topHead"></div>
+        <section id="topMenu"><div class="container"></div></section>
+		<div class="nav_mobile"></div>
+	</div>
+        <div></div-->
+
+
+
+		<!--footer><div class="container"></div>
+
+		</footer>
+
+
+	</div>
+    </body>
+</html-->
